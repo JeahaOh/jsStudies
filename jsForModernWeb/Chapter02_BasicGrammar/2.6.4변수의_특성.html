@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>변수의 특성</h1>
+    <script>
+        console.log('2-33 : 변수의 특성')
+        //  변수 선언
+        var cup = 'Coffee';
+        cup = 'green tea';
+        cup = 'Water';
+        
+        //  출력
+        console.log('Drink ' + cup + '!');
+    </script>
+    <script>
+        console.log('2-34 : 변수의 재선언');
+        //  변수 선언
+        var favoriteFood = 'Pasta';
+        var favoriteFood = 'Pizza';
+        var favoriteFood = 'Taco';
+        
+        //  출력
+        console.log(favoriteFood);
+    </script>
+    <script>
+        console.log('2-35 : 재선언의 문제점');
+        //  변수 선언
+        var alert = 'redAlert';
+        
+        //  출력
+        alert(alert);
+        
+        //  Uncaught TypeError: alert is not a function
+        //  출력 안됨.
+    </script>
+    <script>
+        console.log('2-36 : 변수 정리');
+        //  1번 문제
+        var value = 10;
+        value += 20;
+        console.log(value);
+        
+        var value = 'JavaScript'
+        console.log(value + ' from Hell');
+    </script>
+</body>
+</html>

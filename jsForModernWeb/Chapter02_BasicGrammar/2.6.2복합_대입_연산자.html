@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>복합 대입 연산자</h1>
+    
+    <h6>code 2-25 : 복합 대입 연산자</h6>
+    <script>
+        console.log('2-25');
+        var a = 10;
+        a += 10
+        console.log(a);
+    </script>
+    
+    <h6>code 2-26 : 복합 대입 연산자의 활용</h6>
+    <section></section>
+    <script>
+        window.onload = function(){
+            //  변수 선언
+            var list = '';
+            
+            // 연산자를 사용
+            list += '<ul>';
+            list += '   <li>JavaScript</li>';
+            list += '   <li>in Hell</li>';
+            list += '</ul>';
+            
+            //  문서에 출력
+            document.body.innerHTML = list;
+        }
+    </script>
+</body>
+</html>
