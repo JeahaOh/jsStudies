@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>let 키워드와 const 키워드</h1>
+    <script>
+        console.log('code 2-54 var, let, const 키워드의 기본 사용');
+        var variableA = 52;
+        var variableB = 273;
+        const constantC = 103;
+        
+        console.log(variableA);
+        console.log(variableB);
+        console.log(constantC)
+    </script>
+    <script>
+        console.log('code 2-55 변수와 상수의 차이');
+        
+        let variableL = 273;
+        variableL = 52;
+        console.log(variableL);
+        
+        const constant = 273;
+        console.log(constant);
+//        constant = 52;
+//        console.log(constant);
+    </script>
+    <script>
+        console.log('code 2-56 상수 선언 시 주의 사항');
+        const con = 273;
+//        const concon;
+    </script>
+    <script>
+        console.log('code 2-57 특정 스코프의 변수를 외부의 다른 스코프에서 사용하기 - var 키워드');
+        console.log('code 2-58 특정 스코프의 변수를 외부의 다른 스코프에서 사용하기 - let 키워드');
+        {
+            //  스코프 A
+            var v = 273;
+            let l = 52;
+        }
+        {
+            //  스코프 B
+            console.log(v);
+//            console.log(l);
+        }
+        //  전역 스코프
+        console.log(v);
+//        console.log(l);
+    </script>
+</body>
+</html>

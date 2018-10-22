@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>짧은 조건문</h1>
+    <script>
+        console.log('code 2-10 짧은 조건문 I');
+        true || console.log('A');
+        false|| console.log('B');
+        //  좌변이 거짓이면 우변을 실행
+    </script>
+    <script>
+        console.log('code 2-10 짧은 조건문 II');
+        true && console.log('A');
+        false&& console.log('B');
+        //  좌변이 참이면 우변을 실행
+    </script>
+    <script>
+        console.log('code 2-11 짧은 조건문 II');
+        //  변수 선언
+        var input = Number(prompt('숫자를 입력', '숫자'));
+        
+        //  조건문
+        input % 2 == 0 || console.log('홀수');
+        input % 2 == 0 && console.log('짝수');
+    </script>
+</body>
+</html>
