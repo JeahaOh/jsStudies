@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>익명함수</h1>
+    <script>
+        console.log('code 5-1 함수 생성과 출력');
+        //  변수 생성.
+        var 함수 = function(){
+            var output=prompt('숫자를 입력', '숫자');
+            console.log('output');
+        };
+        
+        //  출력
+        console.log(함수);
+        console.log(typeof(함수));
+    </script>
+    <script>
+        console.log('code 5-3 함수 호출');
+        //  함수 만들기
+        var 함수II = function(){
+            var output = prompt('숫자 입력', '숫자');
+            console.log(output);
+        };
+        
+        //  함수 호출
+        함수II();
+    </script>
+</body>
+</html>

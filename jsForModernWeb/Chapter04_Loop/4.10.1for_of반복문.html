@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>for of 반복문</h1>
+    <script>
+        console.log('code 4-21 for in 반복문');
+        
+        var array = [1, 2, 3, 4];
+        
+        for(var i in array){
+            console.log(array[i]);
+        }
+    </script>
+    <script>
+        console.log('4-22 code for of 반복문');
+        for(const element of [1,2,3,4]){
+            console.log(`${element}번째`);
+        }
+    </script>
+    <script>
+        console.log('code 4-23 for of 반복문에서 반복 횟수 확인');
+        let j = 0;
+        for(const element of['a', 'b', 'c', 'd', 'e']){
+            console.log(`${j}번째 요소는 ${element}`);
+            j++;
+        }
+    </script>
+</body>
+</html>

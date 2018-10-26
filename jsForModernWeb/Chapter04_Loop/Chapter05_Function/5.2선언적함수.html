@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>선언적 함수</h1>
+    <script>
+        console.log('code 5-4 선언적 함수의 재정의 I');
+        
+        function 함수() { console.log('함수 A'); }
+        function 함수() { console.log('함수 B'); }
+        
+        함수();
+    </script>
+    <script>
+        console.log('code 5-5 익명 함수의 재정의 I');
+        
+        var 함수I = function() { console.log('함수 A'); };
+        var 함수I = function() { console.log('함수 B'); };
+        
+        함수I();
+    </script>
+    <script>
+        console.log('code 5-6 익명 함수의 재정의 II');
+        
+        함수II();
+        var 함수II = function() { console.log('함수II A'); }
+        var 함수II = function() { console.log('함수II B'); }
+    </script>
+    <script>
+        console.log('code 5-7 선언적 함수의 재정의 II');
+        
+        함수III();
+        function 함수III() { console.log('함수III A'); }
+        function 함수III() { console.log('함수III B'); }
+    </script>
+    <pre>
+    function
+    
+    선언적 함수 : 
+        function 함수이름 (){} 식으로 선언하는 함수
+    
+    익명 함수 :
+        var 함수이름(){} 식으로 선언하는 함수
+    
+    선언적 함수가 먼저 생성되고, 익명 함수가 나중에 생성됨.
+    </pre>
+</body>
+</html>
