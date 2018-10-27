@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>코드 실행 함수</h1>
+    <pre>
+    eval(String)
+        String을 자바스크립트 코드로 실행하는 함수.
+    </pre>
+    <script>
+        console.log('code 5-32 코드 실행 함수');
+        //  문자열 생성
+        var willEval = '';
+        willEval += 'var number = 10;';
+        willEval += 'console.log(number);';
+        
+        // eval() 함수 호출
+        eval(willEval);
+        
+        console.log('code 5-33 eval() 함수 활용');
+        //  eval() 함수로 호출한 코드릐 변수를 사용
+        console.log('어? : ' + number);
+    </script>
+</body>
+</html>

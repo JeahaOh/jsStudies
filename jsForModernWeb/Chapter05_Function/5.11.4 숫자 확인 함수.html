@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>숫자 확인 함수</h1>
+    <script>
+        console.log('code 5-34 infinity');
+        var number = 1 / 0;
+        console.log(number);
+        
+        console.log('code 5-35 isFinite() 함수');
+        console.log(number + ' : ' + isFinite(number));
+    </script>
+    <script>
+        console.log('code 5-36 Infinity 값 비교');
+        //  변수 선언
+        var value = -10 / 0;
+        
+        //  확인
+        if(value == Infinity){
+            console.log(value + ' is Infinity');
+        }   else {
+            console.log(value + ' is not Infinity');
+        }
+    </script>
+    <script>
+        console.log('code 5-37 NaN 값 비교');
+        if(NaN == NaN){
+            console.log('NaN == NaN');
+        }   else {
+            console.log('NaN != NaN');
+        }
+        
+        console.log('code 5-38 isNaN() 함수');
+        if(isNaN(NaN)){
+            console.log('NaN == NaN');
+        }   else {
+            console.log('NaN != NaN');
+        }
+    </script>
+</body>
+</html>
