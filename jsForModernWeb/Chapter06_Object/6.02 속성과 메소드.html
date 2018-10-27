@@ -34,6 +34,17 @@
         
         //  메소드 호출
         person.eat();
+        
+        console.log('code 6-7 this 키워드');
+        //  변수 선언
+        var p = {
+            name: 'asdf',
+            eat: function(food){
+                console.log(this.name + '가 ' + food + '을/를 쳐묵 쳐묵.'); }
+        };
+        
+        //  메소드 호출
+        p.eat('햄버거')
     </script>
 </body>
 </html>

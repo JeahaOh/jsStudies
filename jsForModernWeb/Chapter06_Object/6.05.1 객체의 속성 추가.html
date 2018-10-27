@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>속성 추가</h1>
+    <script>
+        console.log('code 6-15 빈 객체 생성');
+        var student = {};
+        
+        console.log('code 6-16 동적으로 속성 추가');
+        // 객체에 속성 추가
+        student.이름 = 'JEJE';
+        student.취미 = 'coding';
+        student.특기 = 'chording';
+        
+        //  toString 메소드 만들기
+        student.toString = function(){
+            var print = '';
+            for (var key in this){
+                //  toString()는 출력하지 않게.
+                if(key != 'toString'){
+                    print += key + ':\t' + this[key] +'\n';
+                }
+            }
+            return print;
+        };
+        
+        //  출력
+        console.log(student.toString());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>객체와 반복문</h1>
+    <pre>
+        객체의 속성을 살펴 보려면
+        for in문을 사용해야 함.
+    </pre>
+    <script>
+        //  변수 선언
+        var macBookPro = {
+            name: 'Apple MacBook Pro 2018',
+            price: '4,000,000',
+            color: 'Space Grey',
+            display: 'Retina IPS 2880 X 1800 220ppi',
+            processor: '2.6GHz Intel Core i7',
+            memory: '32GB 2400MHz DDR4',
+            storage: '1TB SSD',
+            graphic: 'Intel UHD Graphics 630 1536MB, Radeon Pro 560X 4096MB'
+        };
+        
+        //  출력
+        var output = '';
+        for (var key in macBookPro){
+            output += '-' + key + ' : ' + macBookPro[key] + '\n';
+        }
+        
+        console.log(output);
+    </script>
+</body>
+</html>
