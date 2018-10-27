@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>함수를 리턴하는 함수.</h1>
+    <script>
+        console.log('code 5-25 익명 함수를 리턴하는 함수');
+        //  함수 생성
+        function returnFX(){
+            return function () {
+                console.log('HEll the FUCKTION...!');
+            };
+        }
+        
+        //  함수 호출
+        returnFX()();
+        //  함수가 리턴되므로 한 번 더 호출해야 실행함.
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>가변인자함수</h1>
+    <script>
+        console.log('code 5-13 arguments 객체');
+        
+        // 함수 생성
+        function sumAll(){
+            console.log(typeof(arguments) + " : " + arguments.length);
+        }
+        
+        // 함수 호출
+        sumAll(1,2,3,4,5,6,7,8,9);
+    </script>
+    <script>
+        console.log('code 5-14 arguments 객체를 사용한 가변인자 함수');
+        
+        //  함수 생성
+        function sumAll(){
+            var output= 0;
+            for (var i ; i < arguments.length; i++){
+                output += arguments[i];
+            }
+            return output;
+        }
+        
+        //  함수 호출 및 출력
+        console.log(sumAll(1,2,3,4,5,6,7,8,9));//?
+    </script>
+</body>
+</html>
