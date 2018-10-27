@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>객체와 배열을 사용한 데이터 관리</h1>
+    <script>
+        console.log('code 6-19,20 배열에 학생 데이터 생성 추가.');
+        var students = [];
+        students.push({ name:'JEJE', kor:87, eng:85, math:50 });
+        students.push({ name:'EKEK', kor:100, eng:95, math:80 });
+        students.push({ name:'MJMJ', kor:98, eng:89, math:100 });
+        students.push({ name:'PPPP', kor:90, eng:90, math:60 });
+        students.push({ name:'Borry', kor:0, eng:0, math:0});
+        
+        console.log('code 6-21 메서드 추가');
+        //  모든 students 배열 안 객체에 메서드 추가.
+        for (var i in students){
+            //  총점을 구하는 메서드 추가
+            students[i].getSum = function(){
+                return this.kor + this.eng + this.math;
+            };
+            
+            //  평균을 구하는 메서드 추가
+            students[i].getAverage = function(){
+                return this.getSum() / 3;
+            };
+        }
+        
+        console.log('code 6-22 학생 성적 출력');
+        //  출력
+        var print = 'name\tsum\tavg\n';
+        for (var i in students){
+            with (students[i]){
+                print += name + '\t' + getSum() + '\t' + getAverage() + '\n';
+            }
+        }
+        
+        console.log(print);
+    </script>
+</body>
+</html>

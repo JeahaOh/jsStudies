@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>함수를 사용한 객체 생성</h1>
+    <script>
+        console.log('code 6-23 객체를 개별적으로 생성할 때의 장점');
+        var students = [];
+        students.push({
+          name:'JEJE', kor:90,
+           math:50, eng:90,
+           feature:'idiot' 
+        });
+        students.push({
+            name:'dusgkwls', kor:92,
+            math:98, eng:96, sci:98,
+            speciality:'cook', hobby:'guitar'
+        });
+        students.push({
+           name:'rnwkdus', kor:76,
+            math:96, eng:94, sci:90,
+            futureHope:'programmer'
+        });
+    </script>
+    <pre>
+        ..? 뻘짓?
+    </pre>
+    <script>
+        console.log('code 6-24, 25 객체를 생성하는 함수 I')
+        function makeStudent(name, kor,math,eng,sci){
+            var willReturn = {
+                //  속성
+                이름: name,
+                국어: kor,
+                수학: math,
+                영어: eng,
+                과학: sci,
+                
+                //  메소드
+                getSum: function(){
+                    return this.국어 + this.수학 + this.영어 + this.과학;
+                },
+                
+                getAvg: function(){
+                    return this.getSum() / 4;
+                },
+                
+                toString: function(){
+                    return this.이름 + '\t' + this.getSum() + '\t' + this.getAvg();
+                }
+            };
+            return willReturn;
+        }
+        
+        console.log('code 6-26 함수를 사용한 객체 생성');
+        //  학생 정보를 배열로 만들기
+        var students = [];
+        
+        //  배열에 요소 담기
+        students.push(makeStudent('JEJE', 90, 50, 90, 60));
+        students.push(makeStudent('EKEK', 100, 85, 100, 95));
+        students.push(makeStudent('MJMJ', 95, 80, 95, 100));
+        students.push(makeStudent('PPPP', 89, 65, 75, 65));
+        students.push(makeStudent('Borry', 0, 0, 0, 0));
+        
+        //  출력하기
+        var print = 'name\tsum\tavg\n';
+        for(var i in students){
+            print += students[i].toString() + '\n';
+        }
+        console.log(print);
+        
+    </script>
+</body>
+</html>

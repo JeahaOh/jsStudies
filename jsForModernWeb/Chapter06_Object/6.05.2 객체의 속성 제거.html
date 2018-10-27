@@ -7,35 +7,35 @@
     <script></script>
 </head>
 <body>
-    <h1>속성 추가</h1>
+    <h1>객체의 속성 제거</h1>
     <pre>
     처음 객체를 생성하는 시점 이후에 속성을 추가하거나 제거하는 것을
     '동적으로 속성을 추가한다' 또는 '동적으로 속성을 제거한다' 라고 표현함.
+    
+    동적으로 속성을 제거할 때는 'delete' 키워드를 사용함.
     </pre>
     <script>
-        console.log('code 6-15 빈 객체 생성');
         var student = {};
-        
-        console.log('code 6-16 동적으로 속성 추가');
-        // 객체에 속성 추가
         student.이름 = 'JEJE';
         student.취미 = 'coding';
         student.특기 = 'chording';
-        
-        console.log('code 6-17 동적으로 메서드 추가');
-        //  toString 메소드 만들기
+        student.특징 = 'idiot';
         student.toString = function(){
             var print = '';
             for (var key in this){
-                //  toString()는 출력하지 않게.
                 if(key != 'toString'){
                     print += key + ':\t' + this[key] +'\n';
                 }
             }
             return print;
         };
-        
         //  출력
+        console.log(student.toString());
+        
+        console.log('code 6-18 객체의 속성 제거');
+        
+        //  속성 제거
+        delete(student.특징);
         console.log(student.toString());
     </script>
 </body>
