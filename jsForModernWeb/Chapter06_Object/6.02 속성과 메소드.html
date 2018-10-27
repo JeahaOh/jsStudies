@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>속성과 메소드</h1>
+    <pre>
+        배열 내부에 있는 값을 요소'element'라고 함,
+        반면 객체 내부에 있는 값을 속성'property'라고 함.
+        
+        객체의 속성 중 함수 자료형인 속성을 메소드(method) 라고 함,
+        코드 6-6의 객체 person은 name, eat 속성이 있고,
+        eat 속성은 함수 자료형 이므로 eat() 메소드라고 부름.
+    </pre>
+    <script>
+        console.log('code 6-5 객체의 속성이 가질 수 있는 자료형');
+        var object = {
+            number: 273,
+            string: 'RitIanTta',
+            boolean: true,
+            array: [1,2,3,4,5,6],
+            method: function(){    }
+        }
+        
+        console.log('code 6-6 속성과 메소드의 구분');
+        var person = {
+            name: 'asdf',
+            eat: function(food){ console.log('아그작 아그작'); }
+        };
+        
+        //  메소드 호출
+        person.eat();
+    </script>
+</body>
+</html>
