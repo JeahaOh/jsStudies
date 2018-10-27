@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 7-1 생성자 함수 생성');
+        function Student(){}
+        
+        console.log('code 7-2 객체 생성');
+        var student = new Student();
+        
+        console.log('code 7-3 속성 생성');
+        function Student(name, kor, math, eng, sci){
+            this.name=name;
+            this.kor=kor;
+            this.math=math;
+            this.eng=eng;
+            this.sci=sci;
+            
+            //  code 7-4 메소드 생성
+            this.getSum = function(){
+                return this.kor + this.math + this.eng + this.sci;
+            };
+            
+            this.getAvg = function(){
+                return this.getSum() / 4;
+            }
+            
+            this.toString = function(){
+                return this.name + '\t' + this.getSum() + '\t' + this.getAvg();
+            };
+        }
+        
+        // code 7-5 생성자 함수를 사용한 객체 배열 생성
+        //  학생 정보 배열 만들기
+        var students = [];
+        students.push(new Student('윤하린', 96, 98, 92, 98));
+        students.push(new Student('JEJE', 85, 50, 85, 50));
+        students.push(new Student('EKEK', 90, 98, 94, 92));
+        
+        //  출력
+        var output = 'name\tsum\tavg\n';
+        for (var i in students){
+            output += students[i].toString() + '\n';
+        }
+        console.log(output);
+    </script>
+</head>
+<body>
+    <h1>생성자 함수 개요</h1>
+</body>
+</html>

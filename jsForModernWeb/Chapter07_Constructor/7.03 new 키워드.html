@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 7-9 new 키워드');
+        //  생성자 함수를 선언
+        function Constructor(value){
+            this.value = value;
+        }
+        
+        //  변수 선언
+        var constructor = new Constructor('HELL');
+                /*  new를 쓰지 않으면
+                    Uncaught TypeError: Cannot read property 'value' of undefined
+                    Error가 뜸.
+                */
+        
+        
+        //  출력
+        console.log(constructor.value);
+    </script>
+</head>
+<body>
+    <h1>new 키워드</h1>
+</body>
+</html>

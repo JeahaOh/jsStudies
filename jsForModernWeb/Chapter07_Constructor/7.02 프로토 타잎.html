@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 7-7 생성자 함수 구성');
+        function Student (name, kor, eng, math, sci){
+            this.name=name;
+            this.kor=kor;
+            this.eng=eng;
+            this.math=math;
+            this.sci=sci;
+        }
+        
+        console.log('code 7-6 프로토 타잎으로 메소드 생성');
+        Student.prototype.getSum = function(){
+            return this.kor + this.eng + this.math + this.sci;
+        }
+        Student.prototype.getAvg = function(){
+            return this.getSum() / 4;
+        }
+        Student.prototype.toString = function(){
+            return this.name + '\t' + this.getSum() + '\t' + this.getAvg();
+        }
+        
+        var asdf = new Student('asdf', 90, 80, 75, 60);
+        console.log('name\tsum\tavg\n' + asdf.toString());
+    </script>
+</head>
+<body>
+    <h1>ProtoType</h1>
+</body>
+</html>
