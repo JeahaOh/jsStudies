@@ -4,14 +4,88 @@
     <meta charset="UTF-8">
     <title>JavaScript Studies</title>
     <style></style>
-    <script></script>
+    <script>
+        console.log('code 7-11 생성자 함후 Retangle 선언');
+        //  생성자 함수 Retangle 선언
+        function Rectangle (width, height){
+            this.width = width;
+            this.height = height;
+        }
+        
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        };
+        
+        //  변수 선언
+        var rectangle = new Rectangle(5, 7);
+        
+        //  출력
+        console.log('AREA : ' + rectangle.getArea());
+        
+        
+        console.log('code 7-12 잘못된 속성 사용');
+        //  변수 선언
+        var rectang = new Rectangle(5, 7);
+        rectang.width = -2;
+        
+        //  출력
+        console.log('AREA : ' + rectang.getArea());
+        
+        
+        console.log('code 7-13 챕슐화');
+        // 생성자 함수 선언
+        function Rec(w, h){
+            //  변수 선언
+            var width = w;
+            var height = h;
+            
+            //  메소드 선언
+            this.getWidth = function() { return width; };
+            this.getHeight = function() { return height; };
+            
+            //  code 7-14 gettet, setter
+            this.setWidth = function(w) {
+                if( w < 0 ) {
+                    throw '길이는 음수일 수 없다 이놈아!';
+                }   else {
+                    width = w;     
+                }
+            };
+            
+            this.setHeight = function(h) {
+                if( h < 0 ) {
+                    throw '길이는 음수일 수 없다 이놈아!';
+                }   else {
+                    height = h;
+                }
+            };
+        }
+        
+        Rec.prototype.getArea = function(){
+            return this.getWidth() * this.getHeight();
+        };
+        
+        //  변수 선언
+        var re = new Rec(5, 7);
+        
+        //  출력
+        console.log('re AREA : ' + re.getArea());
+        
+        //  변수 재선언
+        re.setWidth(-2);
+        console.log('re  minor AREA : ' + re.getArea());
+    </script>
 </head>
 <body>
     <h1>캡슐화</h1>
     <pre>
     캡슐화란
         잘못 사용될 수 있는 객체의 특정 부분을
-        사용자가 사용할 수 없게 막는 기술이라고 정의할 수 있다.        
+        사용자가 사용할 수 없게 막는 기술이라고 정의할 수 있다.
+        만일의 상황을 대비해, 특정 속성이나 메소드를
+        사용자가 사용할 수 없게 숨겨놓은 것임.
+        
+    - Java 나 JavaScript나 비슷한 부분이 있다는것.
     </pre>
 </body>
 </html>

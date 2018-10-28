@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+        table {
+            border: 1px solid dimgray;
+        }
+        tr td {
+            border: 1px solid dimgray;
+        }
+    </style>
+    <script>
+        console.log('code 8-11 Number 객체 생성');
+        //  변수 생성
+        var numberFromLiteral = 1020;
+        var numberFromConstructor = new Number(1020);
+        
+        //  출력
+        console.log(typeof numberFromLiteral);
+        console.log(typeof numberFromConstructor);
+        
+        console.log('code 8-12 Number의 객체 메소드');
+        var no = 273.10203430;
+        
+        //  출력
+        var print = '';
+        print += no.toFixed(1);
+        print += '\n';
+        print += no.toFixed(4);
+        
+        console.log(print);
+        
+        console.log('code 8-14 생성자 함수의 속성과 메소드 생성');
+        //  생성자 함수 생성
+        function Constructor(){}
+        Constructor.property = 1020;
+        Constructor.method = function() {};
+        
+        //  출력
+        console.log(Constructor.property);
+        
+    </script>
+</head>
+<body>
+    <h1>Number 객체</h1>
+<pre>
+     Number객체의 기본 메소드
+     Object의 일곱가지 메소드 + 세가지 메소드를 추가로 갖고 있음.
+</pre>
+        <table>
+            <tr><th>메소드 이름</th><th>설명</th></tr>
+            <tr><td>toExponential()</td>
+                <td>숫자를 지수 표시로 나타낸 문자열을 리턴</td></tr>
+            <tr><td>toFixed()</td>
+                <td>숫자를 고정 소수점 표시로 나타낸 문자열을 리턴</td></tr>
+            <tr><td>toPrecision()</td>
+                <td>숫자를 길이에 따라 지수로 표시<br>
+                    또는 고정 소수점 표시로 나타낸 문자열을 리턴</td></tr>
+            
+            <tr><td>~~</td><td>~~</td></tr>
+            
+            <tr><td>constructor()</td>
+                <td>객체의 생성자 함수</td></tr>
+                
+            <tr><td>hasOwnProperty(name)</td>
+                <td>객체가 name 속성이 있는지 확인</td></tr>
+                
+            <tr><td>isPrototypeof(object)</td>
+                <td>객체가 object의 prototype인지 검사</td></tr>
+                
+            <tr><td>propertyIsEnumerable(name)</td>
+                <td>반복문으로 열거할 수있는지 확인</td></tr>
+                
+            <tr><td>toLocaleString()</td>
+                <td>객체를 호스트 환경에 맞는 언어의 문자열로 변환</td></tr>
+                
+            <tr><td>toString()</td>
+                <td>객체를 문자열로 변환</td></tr>
+                
+            <tr><td>valueOf()</td>
+                <td>객체의 값을 나타냄</td></tr>
+                <tr><td></td><td></td></tr>
+        </table>
+        <p>Number 생성자 함수의 속성</p>
+        <table>
+            <tr><th>속성 이름</th><th>설명</th></tr>
+            <tr><td>MAX_VALUE</td>
+                <td>숫자가 나타낼 수 있는 최대 숫자</td></tr>
+                
+            <tr><td>MIN_VALUE</td>
+                <td>숫자가 나타낼 수 있는 최소 숫자</td></tr>
+                
+            <tr><td>NaN</td>
+                <td>숫자로 나타낼 수 없는 숫자</td></tr>
+                
+            <tr><td>POSITIVE_INFINITY</td>
+                <td>양의 무한대 숫자</td></tr>
+                
+            <tr><td>NEGATIVE_INFINITY</td>
+                <td>음의 무한대 숫자</td></tr>
+        </table>
+
+</body>
+</html>

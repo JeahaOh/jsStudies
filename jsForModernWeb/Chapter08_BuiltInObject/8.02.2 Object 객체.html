@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 8-4 hasOwnProperty() 메소드와 propertyIsEnumerable() 메소드');
+        //  변수 생성
+        var obj = {property: 123};
+        
+        //  출력
+        var print = '';
+        print += 'HOP("property") : ' + obj.hasOwnProperty('property') + '\n';
+        print += 'HOP("constructor") : ' + obj.hasOwnProperty('constructor') + '\n';
+        print += 'PIE("property") : ' + obj.propertyIsEnumerable('property' + '\n');
+        print += 'PIE("constructor") : ' + obj.propertyIsEnumerable('constructor') + '\n';
+        
+        console.log(print);
+        
+        //  for in 반복문 사용
+        for (var key in obj){
+            console.log(obj[key]);
+        }
+        
+        console.log('code 8-5 toString() 메소드');
+        var object = new Object();
+        
+        console.log(object);
+        console.log(object.toString());
+    </script>
+</head>
+<body>
+    <h1>Object 객체</h1>
+    <pre>
+        Object : 자바스크립트의 최상위 객체.
+        Object 객체의 기본 메소드
+        <table>
+            <tr><th>메소드 이름</th><th>설명</th></tr>
+            <tr><td>constructor()</td>
+                <td>객체의 생성자 함수</td></tr>
+                
+            <tr><td>hasOwnProperty(name)</td>
+                <td>객체가 name 속성이 있는지 확인</td></tr>
+                
+            <tr><td>isPrototypeof(object)</td>
+                <td>객체가 object의 prototype인지 검사</td></tr>
+                
+            <tr><td>propertyIsEnumerable(name)</td>
+                <td>반복문으로 열거할 수있는지 확인</td></tr>
+                
+            <tr><td>toLocaleString()</td>
+                <td>객체를 호스트 환경에 맞는 언어의 문자열로 변환</td></tr>
+                
+            <tr><td>toString()</td>
+                <td>객체를 문자열로 변환</td></tr>
+                
+            <tr><td>valueOf()</td>
+                <td>객체의 값을 나타냄</td></tr>
+        </table>
+    </pre>
+</body>
+</html>

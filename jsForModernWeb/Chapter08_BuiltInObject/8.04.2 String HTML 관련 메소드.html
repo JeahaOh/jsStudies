@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>    
+</head>
+<body>
+    <h1>String 객체</h1>
+        <pre>
+            실제 최근은 HTML을 js로 직접 다루지 않음,
+            예제 하나만 풀고 넘어감.
+        </pre>
+        <script>
+            var string = 'JavaScript';
+            var print = '';
+            
+            print += 'anchor: ' + string.anchor() + '</br>';
+            print += 'big: ' + string.big() + '</br>';
+            print += 'blink: ' + string.blink() + '</br>';
+            print += 'bold: ' + string.bold() + '</br>';
+            print += 'fixed: ' + string.fixed() + '</br>';
+            print += 'string: ' + string.fontcolor('red') + '</br>';
+            print += 'fontsize: ' + string.fontsize(15) + '</br>';
+            print += 'italics: ' + string.italics() + '</br>';
+            print += 'link: ' + string.link("http://localhost:8888") + '</br>';
+            print += 'small: ' + string.small() + '</br>';
+            print += 'strike: ' + string.strike() + '</br>';
+            print += 'sub: ' + string.sub() + '</br>';
+            print += 'sup: ' + string.sup() + '</br>';
+            
+            document.write(print);
+            alert(print);
+        </script>
+</body>
+</html>

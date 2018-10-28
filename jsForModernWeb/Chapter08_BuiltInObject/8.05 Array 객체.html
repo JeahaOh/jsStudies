@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 8-24 Array 객체 생성');
+        var arr1 = [1, 2, 3, 4, 5];
+        var arr2 = new Array();
+        var arr3 = new Array(10);
+        var arr4 = new Array(5,1,8,2,9,3,7,4,0,6);
+        
+        console.log('code 8-25 Array 객체의 length');
+        var array = ['A', 'B', 'C', 'D'];
+        
+        //  출력
+        var print = '';
+        
+        for(var i = 0; i < array.length; i++){
+            print += i + ' : ' + array[i] + '\n';
+        }
+        console.log(print);
+        
+        console.log('code 8-26 오름차순 정렬');
+        arr4.sort();
+        
+        console.log(arr4);
+        
+        console.log('내림차순 정렬');
+        arr4.sort(function(left, right){
+            return right - left;
+        });
+        console.log(arr4);
+        
+    </script>
+</head>
+<body>
+    <h1>Array 객체</h1>
+    <pre>
+        Array 객체의 메소드
+        concat()     매개변수로 입력한 배열의 요소를 모구 합쳐 배열을 만들어 리턴
+        join()       배열 안의 모든 요소를 문자열로 만들어 리턴
+        pop()        배열의 마지막 요소를 제거하고 리턴
+        push()       배열의 마지막 부분에 새로운 요소를 추가
+        reverse()    배열의 요소 순서를 뒤집기
+        slice()      요소의 지정한 부분을 리턴
+        sort()       배열의 요소를 정렬
+        splice()     요소의 지정한 부분을 삭제하고 삭제한 요소를 리턴
+    </pre>
+</body>
+</html>

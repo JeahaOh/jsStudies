@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 7-16 상속');
+        // 생성자 함수 선언
+        function Rectangle(w, h){
+            //  변수 선언
+            var width = w;
+            var height = h;
+            
+            //  메소드 선언
+            this.getWidth = function() { return width; };
+            this.getHeight = function() { return height; };
+            
+            this.setWidth = function(w) {
+                if( w < 0 ) {
+                    throw '길이는 음수일 수 없다 이놈아!';
+                }   else {
+                    width = w;     
+                }
+            };
+            this.setHeight = function(h) {
+                if( h < 0 ) {
+                    throw '길이는 음수일 수 없다 이놈아!';
+                }   else {
+                    height = h;
+                }
+            };
+        }
+        
+        Rectangle.prototype.getArea = function(){
+            return this.getWidth() * this.getHeight();
+        };
+        </script>
+        <script>
+            //  생성자 함수의 선언
+        function Square(length){
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+        
+        Square.prototype = Rectangle.prototype;
+        Square.prototype.constructor = Square;
+        
+        console.log('code 7-17 상속 활용');
+        
+        // 변수 선언
+        var rectangle = new Rectangle(5, 7);
+        var square = new Square(5);
+        console.log(rectangle.getArea() + ' : ' + square.getArea());
+            
+        console.log('code 7-18 상속 확인');
+        var square = new Square(5);
+        console.log(square instanceof Rectangle);
+            
+        console.log(square.constructor());
+    </script>
+</head>
+<body>
+    <h1>상속</h1>
+    <pre>
+        base라는 변수(속성)을 이용해서
+        Rectangle의 객체 속성과
+        Rectangle 객체의 prototype이 가진 속성 또는 메소드를
+        Square에 복사했음.
+        
+        
+    </pre>
+</body>
+</html>
