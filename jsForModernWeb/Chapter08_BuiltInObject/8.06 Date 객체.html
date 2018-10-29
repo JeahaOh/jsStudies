@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <script>
+        console.log('code 8-34 Date 객체 생성과 출력');
+        //  변수 선언
+        var date = new Date();
+        
+        //  출력
+        console.log(date);
+        
+        console.log('code 8-35,36 Date 객체 생성');
+        var date = new Date('December 9, 2018');
+        console.log(date);
+        date = new Date('2018, 9, 30');
+        console.log(date);
+        
+        console.log('code 8-38 일주일 후의 시간 구하기');
+        //  변수 선언
+        date = new Date();
+        
+        //  7일 더하기
+        date.setDate(date.getDate() + 7);
+        
+        //  출력
+        console.log(date);
+        
+        console.log('code 8-39 Date 객체의 toXXString() method');
+        var date = new Date(1992, 3, 27);
+        
+        //  출력
+        var print = '';
+        
+        print += '★toDateString : ' + date.toDateString() + '\n';
+        print += '★toGMTString : ' + date.toGMTString() + '\n';
+        print += '★toLocaleDateString : ' + date.toLocaleDateString() + '\n';
+        print += '★toLocaleString : ' + date.toLocaleString() + '\n';
+        print += '★toLocaleTimeString : ' + date.toLocaleTimeString() + '\n';
+        print += '★toString : ' + date.toString() + '\n';
+        print += '★toTimeString : ' + date.toTimeString() + '\n';
+        print += '★toUTCString : ' + date.toUTCString() + '\n';
+        
+        console.log(print);
+        
+        console.log('code 8-40 날짜 간격 구하는 방법');
+        var now = new Date();
+        var before = new Date('Aprill 27, 1992');
+        
+        //  날짜 간격 구하기
+        var interval = now.getTime() - before.getTime();
+        interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+        
+        console.log('Interval : ' + interval + '일');
+        
+        console.log('code 8-41 프로토 타입에 날짜 간격 구하는 메소드 추가');
+        // Date 생성자 함수의 프로토 타입에 메소드 추가
+        Date.prototype.getInterval = function (otherDate){
+            //  변수 선언
+            var interval;
+            //  양수로 날짜 간격을 구하려고 조건문을 사용함.
+            if (this > otherDate) {
+                interval = this.getTime() - otherDate.getTime();
+            }   else {
+                interval = otherDate.getTime() - this.getTime();
+            }
+            
+            //  리턴
+            return Math.floor(interval / (1000 * 60 * 60 *24));
+        };
+        
+        //  변수 선언
+        var now = new Date();
+        var before = new Date('Aprill 27, 1992');
+        
+        //  출력
+        console.log('Interval : ' + now.getInterval(before) + '일');
+    </script>
+</head>
+<body>
+    <h1>Date 객체</h1>
+</body>
+</html>
