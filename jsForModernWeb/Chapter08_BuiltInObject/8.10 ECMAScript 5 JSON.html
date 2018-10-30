@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 8-53 JSON.stringify()');
+        //  변수 선언
+        var object = {
+            name: 'JEJE',
+            region: 'Earth'
+        };
+        
+        //  출력
+        console.log(JSON.stringify(object));
+        
+        console.log('code 8-54 JSON.parse()');
+        var copy = JSON.parse(JSON.stringify(object));
+        
+        console.log(copy.name + ' : ' + copy.region);
+    </script>
+</head>
+<body>
+    <h1>JSON 객체</h1>
+    <pre>
+        JavaScript Object Notation
+        자바스크립트 객체 형태를 갖는 문자열
+        
+            JSON 객체의 method
+        JSON.stringify()     자바스크립트 객체를 JSON문자열로 변환
+        JSON.parse()         JSON 문자열을 js 객체로 변환
+    </pre>
+</body>
+</html>
