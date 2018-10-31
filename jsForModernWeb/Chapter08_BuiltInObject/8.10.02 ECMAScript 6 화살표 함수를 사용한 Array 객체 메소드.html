@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        var students = [
+            {name :'JEJE' , kor : 50, math : 50, eng : 60, sci : 50},
+            {name :'EKEK' , kor : 90, math : 88, eng : 98, sci : 87},
+            {name :'PPPP' , kor : 92, math : 58, eng : 95, sci : 84},
+            {name :'EKEK' , kor : 43, math : 38, eng : 43, sci : 23}
+        ];
+        
+        //  과학 성적이 90점이 넘는 학생 필터
+        var filteredA = students.filter(function(item) {
+            return item > 90;
+        });
+        
+        console.log(filteredA)
+        
+        var filteredA = students.filter((item) => item > 90);
+        console.log(filteredA);
+    </script>
+</head>
+<body>
+    <h1>Default_set_for_studies</h1>
+</body>
+</html>
