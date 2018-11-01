@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    
+</head>
+<body>
+    <h1>Window 객체</h1>
+    <pre>
+        Window 객체는 JavaScript의 최상위 객체임.
+    </pre>
+    <script>
+        console.log('code 9-1 Window 객체의 속성');
+        var print = '';
+        for (var key in window) {
+            print += '★ ' + key + '\n\t->\t' + window[key] + '\n';
+        }
+        console.log(print);
+    </script>
+    <hr>
+    <h3>새로운 window 객체 생성</h3>
+    <pre>
+        window 객체의 window 생성 method
+        open(URL, name, features, replace)    새로운 window 객체를 생성.
+        네개의 매개변수는 모두 옵션임.
+        URL     : 
+        name    : 윈도우간 통신하는 사용하는 윈도우 이름
+        feature :
+            height     : 새 윈도우의 높이     픽셀값
+            width      : 새 윈도우의 너비     픽셀값
+            location   : 주소 입력창의 유무   yes, no, 1, 0
+            menubar    : -
+            resizable  : -
+            status     : -
+            toolbar    : -
+        
+        open() 메소드는 새로운 window 객체를 생성하는 메소드
+        code 9-4처럼 새로운 윈도우 객체에 접근해 속성과 메소드 사용 가능.
+    </pre>
+    <script>
+        console.log('code 9-3 open()의 옵션');
+        // window.open('http://hanbit.co.kr', 'child', 'width=600, height=300', true);
+        
+        console.log('code 9-4 open() method의 return값');
+        var child = window.open('', '', 'width=300, height=200');
+        child.document.write('<h1>From Parent Window</h1>');
+    </script>
+    <hr>
+    <h3>window 객체의 기본 메소드</h3>
+    <pre>
+        moveBy(x,y)    윈도우의 위치를 상대적으로 이동.
+        moveTo(x,y)    윈도우의 위치를 절대적으로 이동.
+        resizeBy(x,y)  윈도우의 크기를 상대적으로 지정.
+        resizeTo(x,y)  윈도우의 크기를 절대적으로 지정.
+        scrollBy(x,y)  윈도우 스크롤의 위치를 상대적으로 이동.
+        scrollTo(x,y)  윈도우 스크롤의 위치를 절대적으로 이동.
+        focus()        윈도우에 초점을 맞춤.
+        blur()         윈도우에 맞춘 초첨을 제거.
+        close()        윈도우를 닫음.
+    </pre>
+    <script>
+        console.log('code 9-6 상대 이동과 절대 이동의 차이');
+        //  변수 선언
+//        var child = window.open('', '', 'width=300, height=200');
+        
+        child.moveTo(0, 0);
+        
+        //  1초마다 함수를 실행시킴
+        setInterval(function () {
+            child.moveBy(10, 10);
+        }, 1000);
+    </script>
+    <hr>
+    <h3>9.5 Screen 객체</h3>
+    <pre>
+        Screen 객체는 운영체제 화면 속성을 갖는 객체임.
+        
+        모든 웹 브라우져가 공통으로 갖는 screen 객체 속성
+            width           화면 너비
+            height          화면 높이
+            availWidth      실제 화면에서 사용 가능한 너비
+            availHeight     실제 화면에서 사용 가능한 높이
+            colorDepth      사용 가능한 색상 수
+            pixelDepth      한 픽셀당 비트 수
+    </pre>
+    <script>
+        console.log('code 9-7 객체의 속성');
+        var print = '';
+        for (var key in screen) {
+            print += '★ ' + key + '\n\t->\t' + screen[key] + '\n';
+        }
+        console.log(print);
+        
+        console.log('code 9-8 브라우져의 크기를 화면에 일치하는 방법');
+        var child2 = window.open('', '', 'width=300, height=200');
+        child2.document.write('<h1>From Parent Window2</h1>');
+        
+        var width = screen.width;
+        var height = screen.width;
+        
+        child2.moveTo(0, 0);
+        child2.resizeTo(width, height);
+        
+        setInterval(function () {
+            child2.resizeBy(-20, -20);
+            child2.moveBy(10, 10);
+        }, 1000);
+    </script>
+    <hr>
+    <h3>9.6 Location 객채</h3>
+    <pre>
+        주소 표시줄과 관련, 프로토콜의 종류, 호스트 이름, 문서 위티등의 정보를 갖고 있음
+        
+            location 객체 속성
+        href     문서의 url 주소
+        host     host name, port localhost:8888
+        hostname 호스트 이름        localhost
+        port                     8888
+        pathname 디렉토리 경로      /project/jsp
+        hash     앵커 이름(#~)     #beta
+        search   요청 매개변수      ?param=10
+        protocol 프로토콜 종류      http:
+        
+            localhost 객체의 메소드
+        assign(link)    현재 위치로 이동
+        reload()        새로고침
+        replace(link)   현재 위치를 이동
+    </pre>
+    <hr>
+    <h3>9.7 Navigator  객체</h3>
+    <pre>
+        웹 페이지를 실행하고 있는 브라우저에 대한 정보가 있음.
+            navigator 객체의 속성
+        appCodeName     브라우져의 코드 이름
+        appName         브라우져의 이름
+        appVersion      브라우져 버젼
+        platform        사용중인 운영체제의 시스템 환경
+        userAgent       웹 브라우져의 전체 정보
+    </pre>
+    <script>
+        console.log('code 9-10 navigator 객체의 속성');
+        var print = '';
+        for (var key in navigator) {
+            print += '★ ' + key + '\n\t->\t' + navigator[key] + '\n';
+        }
+        console.log(print);
+    </script>
+
+</body>
+</html>

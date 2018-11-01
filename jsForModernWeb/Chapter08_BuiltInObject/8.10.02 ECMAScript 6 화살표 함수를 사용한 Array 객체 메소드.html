@@ -5,25 +5,47 @@
     <title>JavaScript Studies</title>
     <style></style>
     <script>
+        console.log('code 8-56 일반적인 배열 메소드 사용');
         var students = [
             {name :'JEJE' , kor : 50, math : 50, eng : 60, sci : 50},
-            {name :'EKEK' , kor : 90, math : 88, eng : 98, sci : 87},
+            {name :'EKEK' , kor : 90, math : 88, eng : 98, sci : 97},
             {name :'PPPP' , kor : 92, math : 58, eng : 95, sci : 84},
-            {name :'EKEK' , kor : 43, math : 38, eng : 43, sci : 23}
+            {name :'YHYH' , kor : 43, math : 38, eng : 43, sci : 91}
         ];
         
-        //  과학 성적이 90점이 넘는 학생 필터
+        //  국어 성적이 80점이 넘는 학생 필터
         var filteredA = students.filter(function(item) {
-            return item > 90;
+            return item.kor > 80;
         });
         
         console.log(filteredA)
         
-        var filteredA = students.filter((item) => item > 90);
+        //  평균이 80점이 넘는 학생을 필터
+        var filteredB = students.filter(function(item) {
+            return((item.kor + item.math + item.eng + item.sci) / 4) > 80;
+        });
+        
+        console.log(filteredB);
+        
+        console.log('code 8-57 화살표 함수를 사용한 Array 객체의 method 활용');
+        //  국어 성적이 80점이 넘는 학생 필터링
+        var filteredA = students.filter((item) => item.kor > 80);
+        
         console.log(filteredA);
+        
+        //  평균이 90점 넘는 학생을 필터링.
+        var filteredB =
+            students.filter((i) => (i.kor + i.math + i.eng + i.sci) / 4 > 80);
+        
+        console.log(filteredB);
     </script>
 </head>
 <body>
-    <h1>Default_set_for_studies</h1>
+    <h1>화살표 함수를 사용한 Array 객체의 메소드 활용</h1>
+    <pre>
+        익명 함수는 화살표 함수로 교체할 수 있다.
+        화살표 함수의 중괄호와 return 키워드를 생략하고 구성할 수 있다.
+        
+    </pre>
 </body>
 </html>

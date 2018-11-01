@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>모바일 장치 구분</h1>
+    <pre>
+        장치 확인 방법은 두가지임.
+            - 서버에서 확인하는 방법
+            - 클라이언트에서 확인하는 방법
+        
+        userAgent를 확인하면 됨.
+        
+        iPhone, iPad, Android, WebOS 등
+    </pre>
+    <script>
+        var userAgent = navigator.userAgent;
+        alert(userAgent);
+        
+        console.log('code 9-18 스마트 폰 구분');
+        var smartPhones = ['iPhone', 'iPad', 'android'];
+        
+        for (var i in smartPhones) {
+            if(navigator.userAgent.toLowerCase().match(new RegExp(smartPhones[i]))){
+                alert('스맛폰');
+                location = 'http://m.localhost:8888//';
+            }
+        }
+        
+        if(window.orientation == 0 || window.orientation == 180) {
+            console.log('Vertical');
+        }   else if(window.orientation == 90 || window.orientation == -90)  {
+            console.log('Horizon');
+        }
+    </script>
+</body>
+</html>
