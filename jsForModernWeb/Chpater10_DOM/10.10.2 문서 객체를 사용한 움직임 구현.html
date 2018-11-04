@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+        body{
+            background-color: darkslategray;
+        }
+        #sun {
+            color: orangered;
+        }
+        
+        #earth {
+            color: forestgreen;
+        }
+        
+        #moon {
+            color: lightgoldenrodyellow;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var sun = document.getElementById('sun');
+            var earth = document.getElementById('earth');
+            var moon = document.getElementById('moon');
+            
+            //  문서 객체의 스타일 속성 지정
+            sun.style.position = 'absolute';
+            earth.style.position = 'absolute';
+            moon.style.position = 'absolute';
+            
+            sun.style.left = 250 + 'px';
+            sun.style.top = 200 + 'px';
+            
+            //  회전을 위한 변수 serthAngle과 moonAngle, 움직임 구현을 위한 setInterval()
+            var earthAngle = 0;
+            var moonAngle = 0;
+            
+            //  애니메이션 시작 (30frames per second 구현)
+            setInterval(function () {
+                //  각도로 지구와 달의 좌표 구하기.
+                var earthLeft = 250 + 150 * Math.cos(earthAngle);
+                var earthTop = 200 + 150 * Math.sin(earthAngle);
+                var moonLeft = earthLeft + 50 * Math.cos(moonAngle);
+                var moonTop = earthTop + 50 * Math.sin(moonAngle);
+                
+                //  위치 이동
+                earth.style.left = earthLeft + 'px';
+                earth.style.top = earthTop + 'px';
+                moon.style.left = moonLeft + 'px';
+                moon.style.top = moonTop + 'px';
+                
+                //  각도 변경
+                earthAngle += 0.1;
+                moonAngle += 0.3;
+            }, 1000 / 30);
+        };
+    
+    </script>
+</head>
+<body>
+    <h1>문서 객체를 사용한 움직임 구현</h1>
+    <pre>
+        수학적 지식이 필요함으로 일단 따라 해보기만 하자.
+    </pre>
+    <h1 id="sun">@</h1>
+    <h1 id="earth">O</h1>
+    <h1 id="moon">.</h1>
+</body>
+</html>

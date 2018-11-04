@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 10-16,17 document.getElementsByTagName() method');
+        window.onload = function () {
+            //  문서 객체 가져오기
+            var headers = document.getElementsByTagName('h2');
+            
+            headers[0].innerHTML = 'EKEK';
+            headers[1].innerHTML = 'JEJE';
+        };
+        
+        console.log('code 10-18 getElementsByTagName() method');
+        window.onload = function () {
+            //  문서 객체 가져오기
+            var header3s = document.getElementsByTagName('h3');
+            
+            for (var i = 0; i < header3s.length; i++) {
+                //  for 문을 사용한 문서 객체의 속성 변경
+                header3s[i].innerHTML = 'for ' + i + ' EKEK';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>문서 객체 가져오기 2</h1>
+    <pre>
+        한 번에 여러 개의 문서 객체 가져오기
+        
+            document 객체의 문서 객체 선택 메소드 II
+        getElementsByName(NAME)             태그의 name 속성이 NAME인 매개변수와 일치하는 문서 객체를
+                                            배열로 가져옴
+        getElementsByTagName(TAG_NAME)      tagName 매개변수와 일치하는 문서 객체를 배열로 가져옴.
+        
+        
+        herders는 배열이므로 반복문을 사용 가능함.
+        BUT! for in 반복문은 사용시 주의.
+    </pre>
+    <h2>1102</h2>
+    <h2>ASDF!</h2>
+    <h3>1</h3>
+    <h3>2</h3>
+    <h3>3</h3>
+    <h3>4</h3>
+    <h3>5</h3>
+    
+</body>
+</html>

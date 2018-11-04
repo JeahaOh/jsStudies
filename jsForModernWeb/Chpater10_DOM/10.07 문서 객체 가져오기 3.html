@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        window.onload = function () {
+            //  문서 객체를 가져옴
+            var header1 = document.querySelector('#header-1');
+            var header2 = document.querySelector('#header-2');
+            
+            //  문서 객체 속성 변경
+            header2.innerHTML = 'querySelector()';
+        }
+    </script>
+</head>
+<body>
+    <h1>문서 객체 가져오기 3</h1>
+    <pre>
+            document 객체의 문서 객체 선택 메소드
+        querySelector(선택자)     선택자로 가장 처음 선택되는 문서 객체를 가져옴.
+        querySelectorAll(선택자)  선택자를 통해 선택되는 문서 객체를 배열로 가져옴.
+        
+        CSS 선택자로 문서 객체를 선택하는 method임.
+    </pre>
+    <h1 id="header-1">HEADER1</h1>
+    <h1 id="header-2">HEADER2</h1>
+</body>
+</html>

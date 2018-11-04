@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        window.onload = function () {
+            //  변수 선언
+            var print = '';
+            //-- code 10-11 innerHTML 속성을 사용한 문서 객체 생성
+            print += '<ul>';
+            print += '    <li>JavaScript</li>';
+            print += '    <li>jQuery</li>';
+            print += '    <li>Ajax</li>';
+            print += '</ul>';
+            //--
+            
+            //  innerHTML 속성에 문자열 할당
+            document.body.innerHTML = print;
+            document.body.innerHTML += '<h1>Document Object Model</h1>';
+            //  문자열을 HTML태그로 넣지 않고, 단순 글자 그대로 출력하고 싶다면
+//            document.body.textContent = print;
+//            document.body.textContent = '<h1>Document Object Model</h1>';
+        }
+    </script>
+</head>
+<body>
+    <h1>문서 객체 만들기 3</h1>
+    <pre>
+        innerHTML
+        태그의 내부를 의미하는 속성
+        문자열을 선언하고 body 문서 객체의 innerHTML 속성에 넣기만 하면 문서 객체를 생성해줌.
+        
+        
+        +@
+        &lt;
+        &gt;
+    </pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 10-7 문서 객체 생성');
+        console.log('code 10-8 문서 객체 속성 지정 I');
+        window.onload = function () {
+            //  변수 선언
+            var img = document.createElement('img');
+            // --- code 10-8 문서 객체 속성 지정 I
+            img.src = '../IMG/CoffeeMagic.jpg';
+            img.width = 350;
+            img.height = 500;
+            //  -- code 10-9 문서 객체의 속성 지정 II
+            img.setAttribute('data-property', 550);
+            //  <img src="../IMG/CoffeeMagic.jpg" width="350" height="500" data-property="550">
+            
+            //  --
+            //  노드 연결
+            document.body.appendChild(img);
+        };
+    </script>
+</head>
+<body>
+    <h1>문서 객체 만들기 2</h1>
+    <pre>
+        DOM은 속성 하나도 하나의 node임
+        
+            문서 객체의 속성 method
+        setAttribute(name, value)     객체의 속성을 지정
+        getAttribute(name)            객체의 속성을 가져옴
+    </pre>
+</body>
+</html>

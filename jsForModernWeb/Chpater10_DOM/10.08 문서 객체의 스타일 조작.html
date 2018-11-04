@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+        body{
+            background-color: darkslategray
+        }
+    </style>
+    <script>
+        console.log('code 10-21,22 문서 객체의 스타일 지정');
+        window.onload = function () {
+            //  문서 객체 가져오기
+            var header1 = document.getElementById('header1');
+            
+            //  문서 객체의 스타일 바꾸기
+            header1.style.border = '2px solid dimgray';
+            header1.style.color = 'cadetblue';
+            header1.style.fontFamily = 'helvetica';
+            header1.style.backgroundColor = 'navy';
+            //  CSS에서 사용하던 이름의 -는 빼고 camelCase 식으로 식별자 이용 가능 ㅇㅇ
+        };
+    </script>
+</head>
+<body>
+    <h1>문서 객체의 스타일 조작</h1>
+    <pre>
+        style 속성 변경 가능
+    </pre>
+    <h1 id="header1">HEADER</h1>
+</body>
+</html>

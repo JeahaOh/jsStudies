@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 10-24 문서 객체의 제거');
+        window.onload = function () {
+            //  문서 객체 가져오기
+            var willRemove = document.getElementById('willErase');
+            
+            //  문서 객체 제거
+            document.body.removeChild(willRemove);
+        };
+    </script>
+</head>
+<body>
+    <h1>문서 객체 제거</h1>
+    <pre>
+            문서 객체 제거 method
+        removeChild(child)     문서 객체의 자식 노드를 제거
+    </pre>
+    <h1 id="willErase">Head Shot</h1>
+    <h1 id="EraseMe">Erase?</h1>
+</body>
+</html>

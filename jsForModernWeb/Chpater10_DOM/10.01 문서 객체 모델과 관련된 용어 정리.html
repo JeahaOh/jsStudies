@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서 객체 모델과 관련된 용어 정리</title>
+    <style>
+        #addictive {
+            width: 150px;
+        }
+    </style>
+    <script>
+        console.log('code 10-2 문서 객체.')
+        window.onload = function () {
+            var header = document.getElementById('header');
+        };
+        //  header 객체를 문서 객체라고 부름.
+    </script>
+</head>
+<body>
+    <h1 id="header">HEADER</h1>
+    <pre>
+        각 요소를 노드라고 부름.
+        요소 노드 = HTML tag
+        요소 노드 안에 들어있는 글자 = text node
+        
+        정적 페이지 - 웹페이지가 처음으로 HTML 페이지에 적혀있는 태그들을 읽으며 생성하는것
+                    특별한 변화 없이 생성했음.
+        동적 페이지 - Java Script로 원래 HTML 페이지에 없던 문서 객체를 생성해 낸 것
+    </pre>
+    <img id="addictive" src="../img/Music%20is%20Highly%20Addictive.jpg" alt="Music is highly addictive">
+    <pre>
+        문서객체 - 텍스트 노드를 갖는 객체 놈들과 가지지 않는 객체놈들로 나뉨.
+        텍스트 노드를 요소 노드에 붙인다 = 텍스트 노드를 갖는 문서 객체 탄생.
+        
+        document 객체의 노드 생성 method
+        createElement(tagName)     요소 노드 생성.
+        createTextNode(text)       텍스트 노드 생성.
+        
+        문서 객체 연결 method
+        appendChild(node)          객체에 노드를 연결
+    </pre>
+    <script>
+        console.log('code 10-5 문서 객체 생성');
+        window.onload = function () {
+            //  변수 선언
+            var header = document.createElement('h1');
+            var textNode = document.createTextNode('DOM from hell');
+            
+            console.log('code 10-6 문서 객체 연결');
+            //  노드를 연결
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+            //  
+        };
+    </script>
+    
+</body>
+</html>
