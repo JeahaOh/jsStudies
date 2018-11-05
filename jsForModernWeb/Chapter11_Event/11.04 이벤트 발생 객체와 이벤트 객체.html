@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        window.onload = function () {
+            document.getElementById('header').onclick = function (e) {
+                //  이벤트가 발생한 객체를 찾을 수 있음.
+                console.log(this);
+//                alert(this);
+                this.style.color = 'orange';
+                this.style.backgroundColor = 'red';
+                
+                var event = e || window.event;
+                
+                
+                //  ?
+                document.body.innerHTML = '';
+                for (var key in event) {
+                    document.body.innerHTML += '<p>' + key + ': ' + event[key] + '</p>';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">CLICK</h1>
+    <h1>이밴트 발생 객체와 이벤트 객체</h1>
+    
+    <pre>
+        ? : 이벤트가 어디에서 발생 했는지, 타입은 무엇인지, 마우스 좌표 등 이벤트와 관련된 내용이 출력 됨.
+    </pre>
+</body>
+</html>
