@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        function whenClick(e) {
+            console.log('click');
+        }
+    </script>
+</head>
+<body>
+    <h1>인라인 이벤트 모델</h1>
+    <pre>
+        가장 기본적인 이벤트 연결 방법
+        조금 지저분해서
+            함수를 script tag 안에 만들고 이를 호출하는 방식을(제일 아래) 더 많이 사용함.
+    </pre>
+    <h1 onclick="console.log('clicked')">Click</h1>
+    <h1 onclick="var alpha=10; console.log(alpha);">click</h1>
+    <h1 onclick="whenClick(event)">CC</h1>
+</body>
+</html>

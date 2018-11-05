@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+        * {
+            border: 1px solid dimgray;
+            padding: 20px
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //  이벤트 연결
+            document.getElementById('JEJE').onclick = function () {
+              console.log('JEJE');
+            };
+            
+            document.getElementById('EKEK').onclick = function () {
+                alert('EKEK');
+            };
+            
+            document.getElementById('qwer').onclick = function () {
+              console.log('SEKOJE');
+            };
+            
+            //  이벤트 전달 제거
+            document.getElementById('asdf').onclick = function (e) {
+                //  이벤트 객체 처리
+                var event = e || window.event;
+                
+                //  이벤트 생성을 알림
+                console.log('EKJE');
+                
+                //  이벤트 전달 제거
+                event.cancelBubble = true;
+                if (event.stopPropagation) {
+                    event.stopPropagation();
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>이벤트 전달</h1>
+    <div onclick="console.log('outterDiv')">
+        <div onclick="console.log('innerDiv')">
+            <div onclick="console.log('span')">
+                    <div onclick="console.log('span')">Pragraph</div>
+            </div>    
+        </div>
+    </div>
+    
+    <span id="JEJE">
+        <span id="EKEK">EKEK</span>
+    </span>
+    <pre>
+        fb UI
+        카드 위에 그림이 있을때 그림을 클릭하면 카드와 그림 모두에게 이벤트가 발생하는것을 끊음.
+    </pre>
+    <div id="qwer">
+        <div id="asdf">MISS_YOU</div>
+    </div>
+</body>
+</html>
