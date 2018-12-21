@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 12-1 이벤트 연결의 예외처리');
+        function registerEventLitener(node, event, listener) {
+            if (node.addEventListener) {
+                //  firefox, chrome, safari, opera
+                node.addEventListener(event, listener, false);
+            }  else if (node.attachEvent) {
+                //  ie
+                node.attachEvent('on' + event, listener);
+            }
+        }
+        
+        console.log('code 12-2 이벤트 객체의 예외 처리');
+        function whenClick(e) {
+            var event = window.event || e;
+            var willAlert = '';
+            willAlert += 'clientX : ' + event.clientX + '\n';
+            willAlert += 'clientY : ' + event.clientY + '\n';
+            alert(willAlert);
+        }
+    </script>
+</head>
+<body>
+    <h1>예외처리</h1>
+    <pre>
+        JAVA처럼 Javascript도 try catch, try catch finally 구문으로 예외를 처리함.
+        
+    </pre>
+    <hr>
+</body>
+</html>
