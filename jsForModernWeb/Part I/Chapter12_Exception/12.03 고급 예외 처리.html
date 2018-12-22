@@ -5,6 +5,7 @@
     <title>JavaScript Studies</title>
     <style></style>
     <script>
+        console.log('code 12-4, 5 예외처리, finally');
         try {
             console.log('try');
             willExcept.bye();
@@ -14,10 +15,28 @@
         } finally {
             console.log('hi');
         }
+        
+        function registerEventListener(node, event, listener) {
+            try {
+                //  최신버전의 웹 브라우저
+                node.addEventListener(event, listener, false);
+            }  catch (exception) {
+                //  구버전 IE
+                node.attachEvent('on' + event, listener);
+            }
+        }
+        
+        window.onload = function () {
+            var header = document.getElementById('header');
+            registerEventListener(header, 'click', function () {
+                console.log('code 12-6 try catch를 이용한 이벤트 연결');
+                alert('click');
+            });
+        };
     </script>
 </head>
 <body>
-    <h1>고급 예외 처리</h1>
+    <h1 id='header'>고급 예외 처리</h1>
     <pre>
         
     </pre>

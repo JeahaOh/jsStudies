@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        console.log('code 12-13 finally 구문 내에서 return');
+        //  함수 선언
+        function test () {
+            try {
+                console.log('A!');
+            } catch (Exception) {
+                console.log('B!');
+                return;
+            } finally {
+                console.log('C!');
+            }
+        }
+        
+        test();
+    </script>
+</head>
+<body>
+    <h1>finally</h1>
+    <pre>
+        
+    </pre>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+//        throw 'custom exception occur';
+        try {
+            throw 'DivideByZeroException'
+        }   catch (exception) {
+            if (exception = 'DivideByZeroException') {
+                console.log('asdf');
+            }
+        }
+        
+        function divide(a, b) {
+            if (b == 0) {
+                throw 'DivideByZeroException';
+            }   else {
+                console.log(a / b);
+            }
+        }
+
+        try {
+            divide(10, 0);
+        }   catch (exception){
+            alert('catch');
+        }
+    </script>
+</head>
+<body>
+    <h1>예외 강제 발생</h1>
+    <pre>
+        
+    </pre>
+    <hr>
+</body>
+</html>

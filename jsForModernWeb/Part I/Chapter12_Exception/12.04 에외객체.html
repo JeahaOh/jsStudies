@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script>
+        try {
+            var array = new Array(9999999999999999999999999999);
+        }  catch (exception) {
+            var print = '';
+            for (var i in exception) {
+                print += i + ': ' + exception[i] + '\n';
+            }
+            console.log(print);
+            console.log(array);
+        }
+    </script>
+</head>
+<body>
+    <h1>예외 객체</h1>
+    <pre>
+예외 객체의 속성
+message     예외 메세지
+description 예외 설명
+name        예외 이름
+    </pre>
+    <hr>
+</body>
+</html>
