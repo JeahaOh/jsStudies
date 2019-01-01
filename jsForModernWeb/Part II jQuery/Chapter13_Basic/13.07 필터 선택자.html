@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 5초 후에 코드를 실행
+            setTimeout(function(){
+                // 변수 선언
+                var value = $('select > option:selected').val();
+                //  출력
+                console.log(value);
+            }, 5000);
+        });
+    </script>
+</head>
+<body>
+    <h1>필터 선택자</h1>
+    
+    <pre>
+선택자 중에 : 기호를 포함하는 선택자를 필터 선택자라고 함.
+    </pre>
+    <hr>
+    <h3>입력 양식 필터 선택자</h3>
+        <select>
+        <option>Apple</option>
+        <option>Bag</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Elephant</option>
+    </select>
+    <pre>
+속성 선택자보다 조금 더 간단한 방법임.
+요소:button     input 태그 중에서 type 속성이 button인 문서 객체와 button 태그를 선택함.
+요소:checkbox   iuput 태그 중에서 type 속성이 checkbox인 문서 객체를 선택.
+요소:file
+요소:image
+요소:password
+요소:radio
+요소:reset
+요소:submit
+요소:text
+------------------------------------------------------------------------------
+요소:checked     체크되어 있는 입력 양식 선택
+요소:disabled    비활성화된 입력 양식 선택
+요소:enabled     활성화된 입력 양식 선택
+요소:focus       초점이 맞춰져 있는 입력 양식 선택
+요소:input       모든 입력 양식을 선택함
+요소:selected    option 객체 중 선택된 태그를 선택함.
+    </pre>
+    <hr>
+</body>
+</html>

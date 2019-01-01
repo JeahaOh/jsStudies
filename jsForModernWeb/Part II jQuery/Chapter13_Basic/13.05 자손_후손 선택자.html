@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // code 13-19 자손 선택자
+            $('ul > *').css('list-style', 'none');
+            // code 13-20 후손 선택자
+            $('body *').css('color', 'dimgray');
+        });
+    
+    </script>
+</head>
+<body>
+    <h1>자손 선택자와 후손 선택자</h1>
+    <div>
+        <ul>
+            <li>Apple</li>
+            <li>Bag</li>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Elephant</li>
+        </ul>
+    </div>
+    <pre>
+자손 선택자와 후손 선택자는 기본 선택자 앞에 붙여 사용하며, 기본 선택자의 범위를 제한함.
+body 태그를 기준으로 body 태그 바로 아래에 있는 div를 자손이라 부르고,
+body 태그의 아래에 있는 모든 객체를 후손이라고 함.
+    </pre>
+    <hr>
+    <h3>자손 선택자</h3>
+    <pre>
+자손 선택자는 자손을 선택하는 선택자 이며 '요소A &gt; 요소B'의 형태로 사용함.
+코드 13-19처럼 사용하면 ul 태그의 자식으로 범위를 한정지어 전체가 선택 됨.
+    </pre>
+    <hr>
+    <h3>후손 선택자</h3>
+    <pre>
+'요소A 요소B' 형태로 사용하며
+요소A의 후손으로 범위를 한정함.
+    </pre>
+</body>
+</html>

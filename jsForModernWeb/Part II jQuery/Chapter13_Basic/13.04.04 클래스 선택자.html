@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.item').css('color', 'orange');
+            //  특정 class 속성을 가지는 태그 선택
+            $('h1.item').css('background', 'dimgray');
+            //  두 가지 클래스를 모두 가지는 태그 선택
+            $('.item.select').css('background', 'red');
+        });
+    </script>
+</head>
+<body>
+    <h1>클래스 선택자</h1>
+    <h1 class="item">Header-0</h1>
+    <h1 class="item select">Header-1</h1>
+    <h1 class="item">Header-2</h1>
+    <pre>
+        
+    </pre>
+    <hr>
+</body>
+</html>
