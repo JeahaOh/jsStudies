@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>객체 확장</h1>
+    <pre>
+기존의 자바스크립트 객체 생성과 속성 추가 법. 
+    </pre>
+    <script>
+        $(document).ready(function() {
+            var object = {};
+            object.name = 'IsoL';
+            object.gender = 'Male';
+            object.part = 'MIDI';
+        });
+    </script>
+    <pre>
+$.extend()
+    </pre>
+    <script>
+        $(document).ready(function () {
+            // 변수 선언
+            var obj = {name:'JEJE'};
+            
+            // $.extend() 사용
+            $.extend(obj, {
+                region: 'Berlin',
+                part: 'D'
+            });
+            
+            // 출력
+            var print = '';
+            $.each(obj, function (key, item) {
+                print += key + ': ' + item + '\n';
+            });
+            console.log(print)
+        });
+    </script>
+    <hr>
+</body>
+</html>

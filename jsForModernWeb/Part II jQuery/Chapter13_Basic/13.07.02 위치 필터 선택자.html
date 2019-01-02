@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('tr:odd').css('background', '#F9F9F9');
+            $('tr:even').css('background', '#9F9F9F');
+            $('tr:first').css('background', '#000000').css('color', '#FFFFFF');
+        });
+    </script>
+</head>
+<body>
+    <h1>위치 필터 선택자</h1>
+    <pre>
+요소:odd     홀수 번째에 위치한 문서 객체 선택
+요소:even    짝수 번째에 위친한 문서 객체 선택
+요소:first   첫 번째에 위치한 문서 객체를 선택
+요소:last    마지막에 위치한 문서 객체를 선택
+    </pre>
+    <table>
+        <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+        <tr><td>강민수</td><td>AB</td><td>서울</td></tr>
+        <tr><td>구지연</td><td>B</td><td>CA</td></tr>
+        <tr><td>asdf</td><td>AB</td><td>MT</td></tr>
+        <tr><td>qwer</td><td>O</td><td>서울</td></tr>
+        <tr><td>zxcv</td><td>A</td><td>경기</td></tr>
+        <tr><td>ghjk</td><td>B</td><td>Berlin</td></tr>
+    </table>
+    <hr>
+</body>
+</html>

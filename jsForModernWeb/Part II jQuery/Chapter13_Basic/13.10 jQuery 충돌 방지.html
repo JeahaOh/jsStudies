@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style>
+        test {
+            background-color: cadetblue;
+        }
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>jQuery 충돌 방지</h1>
+    <pre>
+jQuery 외에도 여러 프레임 워크나 플러그인을 사용 할 때 충돌할 가능성이 있음.
+충돌 방지 하는 방법 2가지
+    </pre>
+    <script>
+        console.log('code 13-41');
+        $.noConflict();
+        jQuery(document).ready(function () {
+            console.log('Bye $!');
+        });
+    </script>
+    <script>
+        console.log('code 13-42');
+        var J = jQuery;
+        J('body').addClass('test');
+    </script>
+    <hr>
+</body>
+</html>
