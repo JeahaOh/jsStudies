@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>문서 객체 탐색 종료</h1>
+    <pre>
+        end()
+            문서 객체 선택을 한 단계 뒤로 돌림
+            체이닝을 사용해 한줄로 다른 문서 객체 스타일은 적용할 수 있게 도와줌
+    </pre>
+    <script>
+        $(document).ready(function() {
+            $('h3').css('backgroundColor', 'orange').
+                filter(':even').css('color', 'white').end().
+                filter(':odd').css('color', 'red');
+        });
+    </script>
+    <h3>Header-0</h3>
+    <h3>Header-1</h3>
+    <h3>Header-2</h3>
+    <h3>Header-3</h3>
+    <hr>
+</body>
+</html>

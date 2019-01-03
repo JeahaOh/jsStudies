@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+    <h1>문서 객체의 특징 판별</h1>
+    <pre>
+is()     문서 객체가 특징이 있는지 반단할 때 사용
+    </pre>
+    <h2 class="select">Header-0</h2>
+    <h2>Header-1</h2>
+    <h2 class="select">Header-2</h2>
+    <script>
+        $(document).ready(function() {
+           $('h2').each(function() {
+               if ($(this).is('.select')){
+                   $(this).css('background', 'dimgray');
+               }
+           })
+        });
+    </script>
+    <hr>
+</body>
+</html>

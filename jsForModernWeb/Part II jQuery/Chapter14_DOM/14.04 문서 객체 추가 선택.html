@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script></script>
+</head>
+<body>
+    <h1>문서 객체 추가 선택</h1>
+    <pre>
+add()
+   문서 객체를 추가적으로 선택
+    </pre>
+    <script>
+        $(document).ready(function() {
+            $('h2').css('background', 'Gray').add('h3').css('float', 'left');
+        });
+    </script>
+    <h2>Header-0</h2>
+    <h3>Header-1</h3>
+    <h2>Header-2</h2>
+    <h3>Header-3</h3>
+    <h2>Header-4</h2>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        // 변수 선언
+        var xml = '';
+        xml += '<friends>';
+        xml += '    <friend>';
+        xml += '        <name>asdf</name>';
+        xml += '        <lang>Buby</lang>';
+        xml += '    </friend>';
+        xml += '    <friend>';
+        xml += '        <name>qwer</name>';
+        xml += '        <lang>Java</lang>';
+        xml += '    </friend>';
+        xml += '    <friend>';
+        xml += '        <name>zxcv</name>';
+        xml += '        <lang>C#</lang>';
+        xml += '    </friend>';
+        xml += '</friends>';
+        
+        $(document).ready(function() {
+            // 변수 선언
+            var xmlDoc = $.parseXML(xml);
+            $(xmlDoc).find('friend').each(function(index){
+                var print = '';
+                print += '<div>';
+                print += '  <h2>' + $(this).find('name').text() + '</h2>';
+                print += '  <p>' + $(this).find('lang').text() + '</p>';
+                print += '</div>';
+                
+                // 출력
+                document.body.innerHTML += print;
+            });
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>특정 태그 선택</h1>
+    <pre>
+find()  특정 태그를 선택하는데 사용하며, xml문서에서 데이터를 추출하는데 많이 사용함.
+    </pre>
+    <hr>
+</body>
+</html>

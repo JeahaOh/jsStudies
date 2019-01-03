@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+    <h1>$.extend() 메소드를 이용한 옵션 객체 보완</h1>
+    <script>
+        console.log('code 13-44 $.extend() 메소드 기본사용');
+        var obj = $.extend({ a: 10 }, { a: 20, b: 20 }, { c: 30 });
+        console.log(JSON.stringify(obj));
+    </script>
+    <pre>
+        앞의 기본값 객체를 넣고, 뒤에 사용자 정의 객체를 엏어서 옵션 객체를 보완할 수 있음.
+        다음 코드와 같음
+    </pre>
+    <script>
+        console.log('code 13-45 $.extend() 메소드를 사용한 옵션 객체 보완');
+        // 함수 선언
+        function test(options) {
+            // 옵션 객체 초기화
+            options = $.extend({
+                // 기본값
+                valueA: 10,
+                valueB: 20,
+                valueC: 30
+            }, options);
+            // 출력
+            console.log(options.valueA + ' : ' + options.valueB + ' : ' + options.valueC);
+        }
+        
+        // 함수 호출
+        test({
+            valueA: 52, 
+            valueB: 273
+        });
+    </script>
+    <hr>
+</body>
+</html>

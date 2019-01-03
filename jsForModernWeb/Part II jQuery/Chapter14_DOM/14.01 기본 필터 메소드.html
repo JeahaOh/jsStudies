@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>기본 필터 메소드</h1>
+    <pre>
+        filter()
+            문서 객체를 필터링 함.
+        $(selector).filter(selector);
+        $(selector).filter(function () {});
+    </pre>
+    <h3>Header-0</h3>
+    <h3>Header-1</h3>
+    <h3>Header-2</h3>
+    <h3>Header-3</h3>
+    <h3>Header-4</h3>
+    <h3>Header-5</h3>
+    <script>
+/*
+        //  code 14-2 필터 선택자
+        $(document).ready(function() {
+           $('h3:even').css({
+               backgroundColor: 'black',
+               color: 'white'
+           });
+        });
+*//*
+        //  code 14-3 filter() 메소드
+        $(document).ready(function() {
+           $('h3').filter(':even').css({
+               backgroundColor: 'black',
+               color: 'white'
+           });
+        });
+*/
+        // filter() 메소드의 매개변수로 함수를 넣을 경우
+        $(document).ready(function() {
+           $('h3') .filter(function (index) {
+               return index % 3 == 0;
+           }).css({
+               backgroundColor: 'black',
+               color: 'white'
+           });
+        });
+    </script>
+    <hr>
+</body>
+</html>

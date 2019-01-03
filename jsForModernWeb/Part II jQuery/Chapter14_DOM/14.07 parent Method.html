@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+    <style></style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+//            // span 태그 부모의 background 스타일 속성을 red로 변경
+//            $('span').parent().css('background', 'red');
+            // 버튼을 클릭하면
+            $('button').click(function() {
+                // 자신의 글자를 변경
+                $(this).text('비활성화 하기');
+                // 자신의 부모
+                $(this).parent().css('background', 'red');
+                $(this).parent().find('span').text('활성화');
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Parent() 메소드</h1>
+    
+    <pre>
+        
+    </pre>
+    <div>
+        <span>비활성화</span>
+        <button>활성화 하기</button>
+    </div>
+    <div>
+        <span>비활성화</span>
+        <button>활성화 하기</button>
+    </div>
+    <hr>
+</body>
+</html>
