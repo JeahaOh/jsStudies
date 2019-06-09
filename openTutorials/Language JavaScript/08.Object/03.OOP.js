@@ -18,4 +18,3 @@ var grades = {
 
 console.log( "List : Jeaha : " + grades['list']['Jeaha'] );
 // grades['show']();
-grades.show();
