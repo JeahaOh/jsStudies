@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<body>
+  <input type='button' value='alert' onclick='alert("Hell World");' />
+  <input type='button' value='confirm' onclick='func_confirm()' />
+  <script>
+    function func_confirm() {
+      if( confirm('ok?') ) {
+        console.log('ok');
+      } else {
+        console.log('cancel');
+      }
+    }
+  </script>
+  <input type='button' value='prompt' onclick='func_promt()' />
+  <script>
+    function func_promt() {
+      if( prompt('id?') === 'asdf' ){
+        console.log('true');
+      } else {
+        console.log('false');
+      }
+    }
+  </script>
+</body>
+</html>

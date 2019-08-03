@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>Location</title>
+</head>
+<body>
+  <script>
+    //  현재 화면의 URL 알아내기.
+    console.log(location.toString(), location.href);
+
+    //  URL Parsing
+    console.log(location.protocol);
+    console.log(location.host);
+    console.log(location.port);
+    console.log(location.pathname);
+    console.log(location.search);
+    console.log(location.hash);
+
+    //  URL 변경하기
+    location.href = 'http://jeaha.dev';
+    location = 'http://jeaha.dev';
+
+    //  페이지 리로드.
+    location.reload();
+  </script>
+</body>
+</html>

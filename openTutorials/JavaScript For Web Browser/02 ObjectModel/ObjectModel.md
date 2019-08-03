@@ -1,0 +1,17 @@
+# Object Model
+- DOM
+  - Document Object Model
+  - 웹페이지의 내용을 제어함.
+  - window의 프로퍼티인 document 프로퍼티에 할당된 Document객체가 이런 작업을 담당한다.
+- BOM
+  - Browser Object Model
+  - 웹페이지의 내용을 제외한 브라우저의 요소들을 객체화시킨 것들.
+  - 전역 객체 Window의 프로퍼티에 속한 객체들.
+    - navigator
+    - screen
+    - location
+    - frame
+    - history
+    - XMLHttpRequest
+- JavaScript Core
+  - JS 언어 자체에 정의 되어 있는 객체들.
