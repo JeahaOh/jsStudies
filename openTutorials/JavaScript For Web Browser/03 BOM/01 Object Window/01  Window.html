@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Window 객체</h3>
+<pre>
+Window 객체는 식별자 window를 통해서 얻을 수 있다.
+또한 생략 가능하다.
+Window 객체의 메소드인 alert를 호출하는 방법은 다음과 같다.
+</pre></br>
+<script>
+  alert('Hell World');
+  window.alert('Hell World');
+</script>
+<pre>
+전역변수 a에 접근하는 방법
+</pre></br>
+<script>
+var a = 1;
+console.log(a);
+console.log(window.a);
+</script>
+<pre>
+객체를 만든다는 것은 결국 window 객체의 프로퍼티를 만드는 것과 같다.
+</pre>
+<script>
+var b = {id:'asdf'};
+console.log(b.id);
+console.log(window.b.id);
+</script>
+</body>
+</html>
