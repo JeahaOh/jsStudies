@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+</head>
+<body>
+  <h1>jQuery</h1>
+  <pre>
+map은 jQuery 객체의 엘리먼트를 하나씩 순회한다.
+이 때 첫번째 인자로 전달된 함수가 호출되는데
+첫번째 인자로 엘리먼트의 인덱스, 두번째 인자로 엘리먼트 객체(DOM)이 전달된다.
+  </pre>
+  <hr>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <script src='../../../../jquery-3.3.1.min.js'></script>
+  <script>
+    var li = $('li');
+    li.map(function( index, elem){
+      console.log(index, elem);
+      $(elem).css('color', 'red');
+    })
+  </script>
+</body>
+</html>

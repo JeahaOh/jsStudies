@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Studies</title>
+</head>
+<body>
+  <h1>jQuery</h1>
+  <pre>
+jQuery 객체에는 조회된 엘리먼트가 담겨있다.
+jQqery 객체는 일종의 유사배열의 형채로 도회된 엘리먼트를 가지고 있기 때문에,
+배열처럼 사용해서 엘리먼트를 가저올 수 있다.
+<hr>
+li[i]의 값은 해당 엘리먼트에 대한 jQuery 객체가 아니라 DOM 객체다.
+따라서 jQeury의 기능을 이용해서 이 객체를 제어하려면 jQeury 함수를 이용해야 한다.
+  </pre>
+  <hr>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <script src='../../../../jquery-3.3.1.min.js'></script>
+  <script>
+    console.log( $('li').length );
+    console.log( $('li')[0] );
+    var li = $('li');
+    for( var i = 0; i < li.length; i++ )
+      console.log( li[i].constructor );   //  HTML Li Element, DOM 객체
+
+    for( var i = 0; i < li.length; i++ )
+      $(li[i]).css('color', 'red'); 
+  </script>
+</body>
+</html>
