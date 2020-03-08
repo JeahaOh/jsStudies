@@ -107,7 +107,7 @@ ES6
 뭐지 이건..
   
 ## 29 배열 내장 함수 - reduce 2
-Arrya.reduce() 쓸곳이 많은 것 같은데 알듯 말듯 하네 이거.
+Array.reduce() 쓸곳이 많은 것 같은데 알듯 말듯 하네 이거.
 
 ## 30 Array - EX
 
