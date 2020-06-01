@@ -1,5 +1,5 @@
 const slime = {
-  name : 'slime'
+  name: 'slime'
 };
 
 const cuteSlime = slime;
@@ -9,10 +9,11 @@ const purpleCuteSlime = cuteSlime;
 purpleCuteSlime.color = 'purple';
 
 
-console.log( slime );
+console.log(slime, ' : slime');
 
-console.log( cuteSlime );
+console.log(cuteSlime, ' : cuteSlime');
+console.log(cuteSlime === slime);
 
-console.log( purpleCuteSlime );
+console.log(purpleCuteSlime, ' : purpleCuteSlime');
 
-console.log( purpleCuteSlime === slime );
+console.log(purpleCuteSlime === slime);
