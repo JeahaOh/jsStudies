@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html { border : 5px solid lightslategrey; padding: 30px; }
+    body { background-color : black; color : lightslategrey; }
+    #outer { width: 100%; text-align: center; }
+    #target { display: inline-block; width : 200px; height: 200px; background-color: lightseagreen; margin: 20px; }
+    table { border-collapse: collapse; margin: 10px; float: left; width:  200px; }
+    td, th { padding : 10px; border: 1px solid lightslategrey; }
+    .container { display: inline-block; width: fit-content; height: fit-content;}
+    h3 { margin : 0; }
+  </style>
+</head>
+<body>
+  <div id='outer'>
+    <div id='target'></div>
+  </div>
+
+  <div class='container'>
+    <table>
+      <tr>
+        <th>EVENT TYPE</th>
+        <th>INFO</th>
+      </tr>
+      <tr>
+        <td>click</td>
+        <td id='elmclick'></td>
+      </tr>
+      <tr>
+        <td>dblclick</td>
+        <td id='elmdblclick'></td>
+      </tr>
+      <tr>
+        <td>mousedown</td>
+        <td id='elmmousedown'></td>
+      </tr>
+      <tr>
+        <td>mouseup</td>
+        <td id='elmmouseup'></td>
+      </tr>
+      <tr>
+        <td>mousemove</td>
+        <td id='elmmousemove'></td>
+      </tr>
+      <tr>
+        <td>mouseover</td>
+        <td id='elmmouseover'></td>
+      </tr>
+      <tr>
+        <td>mouseout</td>
+        <td id='elmmouseout'></td>
+      </tr>
+      <tr>
+        <td>contextmenu</td>
+        <td id='elmcontextmenu'></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>KEY</th>
+        <th>INFO</th>
+      </tr>
+      <tr>
+        <td>event.altKey</td>
+        <td id='elmaltkey'></td>
+      </tr>
+      <tr>
+        <td>event.ctrlKey</td>
+        <td id='elmctrlkey'></td>
+      </tr>
+      <tr>
+        <td>event.shiftKey</td>
+        <td id='elmshiftKey'></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>POSITION</th>
+        <th>INFO</th>
+      </tr>
+      <tr>
+        <td>event.clientX</td>
+        <td id='elemclientx'></td>
+      </tr>
+      <tr>
+        <td>event.clientY</td>
+        <td id='elemclienty'></td>
+      </tr>
+    </table>
+  </div>
+  
+  <script>
+    var t = document.getElementById('target');
+    function handler( event ) {
+      var info = document.getElementById('elm' + event.type);
+      var timestr = new Date().getMilliseconds();
+      info.innerHTML = (timestr);
+
+      if(event.altKey) {
+        document.getElementById('elmaltkey').innerHTML = timestr;
+      }
+
+      if(event.ctrlKey) {
+        document.getElementById('elmctrlkey').innerHTML = timestr;
+      }
+
+      if(event.shiftKey){
+        document.getElementById('elmshiftKey').innerHTML = timestr;
+      }
+
+      document.getElementById('elemclientx').innerHTML = event.clientX;
+      document.getElementById('elemclienty').innerHTML = event.clientY;
+    }
+    t.addEventListener( 'click', handler );
+    t.addEventListener( 'dblclick', handler );
+    t.addEventListener( 'mousedown', handler );
+    t.addEventListener( 'mouseup', handler );
+    t.addEventListener( 'mousemove', handler );
+    t.addEventListener( 'mouseover', handler );
+    t.addEventListener( 'mouseout', handler );
+    t.addEventListener( 'contextmenu', handler );
+  </script>
+  <div class='container'>
+  <hr>
+  <pre>
+이번 예제는 마우스와 관련된 기능을 종합적으로 보여준다.
+
+
+<h3>이벤트 타입</h3>
+웹 브라우져는 마우스와 관련해서 다양한 이벤트 타입을 지원한다.
+- click
+- dblclick
+- mousedown
+- mouseup
+- mousemove
+- mouseover
+- mouseout
+- contextmenu
+
+
+
+<h3>키보드 조합</h3>
+마우스 이벤트가 호출될 때 특수 키(ctrl, alt, shift)가 눌러진 상태를 감지해야 한다면
+이벤트 객체의 프로퍼티를 사용한다.
+- event.shiftKey
+- event.altKey
+- event.ctrlKey
+
+
+
+<h3>마우스 포인터 위치</h3>
+마우스 이벤트와 관련한 작업에서는 마우스 포인터의 위치를 알아내는 것이 중요할 때가 있는데,
+이런 경우 이벤트 객체의 clientX와 clientY를 사용한다.
+  </pre>
+</div>
+</body>
+</html>

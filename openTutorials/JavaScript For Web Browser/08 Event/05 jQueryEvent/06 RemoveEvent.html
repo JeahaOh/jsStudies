@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='../../../jquery-3.3.1.min.js'></script>
+</head>
+<body>
+  <pre>
+    <input type='text' id='target' />
+    <input type='button' id='remove' value='remove' />
+    <p id='status'></p>
+  </pre>
+
+  <script>
+    var handler = function( e ) {
+      $('#status').text( e.type );
+    };
+
+    $('#target').on('focus blur', handler);
+
+    $('#remove').on('click', function(e) {
+      $('#target').off('focus blur', handler);
+      $('#status').text( 'handler off' );
+    })
+  </script>
+
+</body>
+</html>

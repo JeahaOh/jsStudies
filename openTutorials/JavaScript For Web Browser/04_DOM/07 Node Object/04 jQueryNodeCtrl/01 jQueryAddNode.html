@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <script src='../../../../jquery-3.3.1.min.js'></script>
+  <style>
+    div {
+      border: 1px solid grey;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class='target'>
+    <b>Content 1</b>
+  </div>
+  <hr>
+  <div class='target'>
+    <b>Content 2</b>
+  </div>
+  <script>
+    $('.target').before('<div>before</div>');
+    $('.target').after('<div>after</div>');
+    $('.target').prepend('<div>prepend</div>');
+    $('.target').append('<div>append</div>');
+  </script>
+</body>
+</html>

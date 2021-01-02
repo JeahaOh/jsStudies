@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      border: 1px solid grey;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <ul id='target'>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+
+  <input type='button' onclick='get();' value='get' />
+  <input type='button' onclick='set();' value='set' />
+  
+  <pre>
+outerHTML은 선택한 엘리먼트를 포함해서 처리한다.
+  </pre>
+
+  <script>
+    function get() {
+      var target = document.getElementById('target');
+      alert(target.outerHTML);
+    }
+    function set() {
+      var target = document.getElementById('target');
+      target.outerHTML = "<ol id='target'><li>JavaScript Core</li><li>BOM</li><li>DOM</li></ol>";
+    }
+  </script>
+</body>
+</html>

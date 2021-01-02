@@ -13,4 +13,4 @@ async function progress() {
 
 progress().then(value => {
   console.log(value);
-});         
+});

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html { border : 5px solid lightslategrey; padding: 30px; }
+    body { border : 5px solid lightseagreen; padding : 30px; }
+  </style>
+</head>
+<body>
+<pre>
+focus는 엘리먼트에 포커스가 생겼을 때,
+blur는 엘리먼트에 포커스가 사라졌을 때 발생하는 이벤트다.
+다음 태그들을 제외한 모든 태그에서 발생한다.
+base, bdo, br, head, html, iframe, meta, param, script, style, title
+</pre>
+<label for='target'>TEXT</label>
+<input type='text' id='target' /> <br>
+
+<script>
+  var t = document.getElementById('target');
+  t.addEventListener('blur', function( evt ) {
+    evt.target.style.background = 'lightblue';
+  });
+
+  t.addEventListener('focus', function( evt ) {
+    evt.target.style.background = 'lightpink';
+  });
+</script>
+</body>
+</html>

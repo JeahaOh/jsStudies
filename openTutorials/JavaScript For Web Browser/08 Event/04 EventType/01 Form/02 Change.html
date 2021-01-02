@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html { border : 5px solid lightslategrey; padding: 30px; }
+    body { border : 5px solid lightseagreen; padding : 30px; }
+  </style>
+</head>
+<body>
+<pre>
+change는 폼 컨트롤의 값이 변경되었을 때 발생하는 이벤트다.
+input(text, radio, checkbox), textarea, select 태그에 적용된다.
+</pre>
+<form action='#'>
+  <p id='result'></p>
+  <label for='target'>TEXT</label>
+  <input type='text' id='target' /> <br>
+</form>
+
+<script>
+  var t = document.getElementById('target');
+  t.addEventListener('change', function( evt ) {
+    console.log(evt.target.value);
+    document.getElementById('result').innerHTML = evt.target.value;
+  });
+</script>
+</body>
+</html>

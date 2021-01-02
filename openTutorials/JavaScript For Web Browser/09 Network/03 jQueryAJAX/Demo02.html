@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='jQuery.js'></script>
+</head>
+<body>
+  <pre>
+    <p>TIME : <span id='time'></span></p>
+    <form >
+      <select id='timezone' name='timezone'>
+        <option value='Asia/Seoul'>Asia/Seoul</option>
+        <option value='America/New_York'>America/New_York</option>
+      </select>
+      <select id='format' name='format'>
+        <option value='Y-m-d H:i:s'>Y-m-d H:i:s</option>
+        <option value='Y-m-d'>Y-m-d</option>
+      </select>
+    </form>
+    <input type='button' id='execute' value='execute' />
+  </pre>
+
+  <script>
+    $('#execute').click( function() {
+      $.ajax({
+        url: '/time2',
+        type: 'post',
+        data: $('form').serialize(),
+        after: console.log($('form').serialize()),
+        success: function( data ){
+          $('#time').text( data );
+        }
+      })
+    });
+  </script>
+
+</body>
+</html>

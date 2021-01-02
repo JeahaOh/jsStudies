@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <pre>
+인라인(inline) 방식으로 이벤트를 등록하는 방법을 알아보자.
+인라인 방식은 이벤트를 이벤트 대상의 태그 속성으로 지정하는 것이다.
+<input type='button' onclick='alert("Hell The JS")' value='button' />
+
+이벤트가 발생한 대상을 필요로 하는 경우 this를 통해서 참조할 수 있다.
+
+자기 자신을 참조하는 불편한 방법
+<input type='button' id='target' onclick='alert("Hell The " + document.getElementById("target").value );' value='id.BUTTON' />
+
+this를 이용해서 간편하게 참조할 수 있다.
+<input type='button' onclick='alert("Hell The " + this.value );' value='this.BUTTON' />
+
+
+Inline 방식은 태그에 이벤트가 포함되기 때문에 이벤트의 소재를 파악하는 것이 편리함.
+BUT 정보인 HTML과 제어인 JS가 혼재된 형태이기 때문에 바람직 하지 않다.
+  </pre>
+
+</body>
+</html>

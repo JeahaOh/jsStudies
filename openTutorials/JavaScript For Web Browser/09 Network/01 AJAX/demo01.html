@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='jQuery.js'></script>
+</head>
+<body>
+  <pre>
+    <p>TIME : <span id='time'></span></p>
+    <input type='button' id='execute' value='execute' />
+  </pre>
+
+  <script>
+    $('#execute').on('click', function(e) {
+      //  XMLHttpRequest 객체 생성
+      var xhr = new XMLHttpRequest();
+      //  접속 하려는 대상을 지정.
+      //  첫번때 인자는 form 태그의 method에 대응하는 것으로 GET/POST 방식을 주로 이용함.
+      //  두번째 인자는 접속하고자 하는 서버쪽 리소스의 주소로 form 태그의 action에 해당
+      xhr.open('GET', '/time');
+      //  onreadystatechange 이벤트는 서버와으 통신이 끝났을 때 호출 되는 이벤트.
+      //  readystate는 통신의 현재상태를 알려줌
+      //  4는 통신이 완료됨을 의미
+      //  status는 HTTP 통신의 결과를 의미, 200
+      //  responseText 프로퍼티는 서버에서 전송한 데이터를 담고 있음.
+      xhr.onreadystatechange = function() {
+        if( xhr.readyState === 4 && xhr.status === 200 ) {
+          console.log(xhr);
+          document.querySelector('#time').innerHTML = xhr.responseText;
+        }
+      }
+      xhr.send();
+    });
+  </script>
+
+</body>
+</html>

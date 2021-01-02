@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEXT OBJECT</title>
+</head>
+<body id='start'>
+  
+  <p id='target1'><span>Hell The World.</span></p>
+  <p id='target2'>
+    <span>HELL THE WORLD.</span>
+  </p>
+
+  <script>
+    var t1 = document.getElementById('target1').firstChild;
+    var t2 = document.getElementById('target2').firstChild;
+
+    console.log(t1.firstChild.nodeValue);
+
+    try {
+      console.log(t2.firstChild.nodeValue);
+    } catch(e) {
+      console.log(e);
+    }
+    console.log(t2.nextSibling.firstChild.nodeValue);
+
+    /** Result
+     *  Hell The World.
+     *  TypeError: Cannot read property 'nodeValue' of null at TextObject.html:23
+     *  HELL THE WORLD.
+     */
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Node의 종류 API</title>
+</head>
+<body id='start'>
+  <ul>
+    <li><a href='./32'>HTML</a></li>
+    <li><a href='./33'>CSS</a></li>
+    <li><a href='./34'>JS</a>
+      <ul>
+        <li><a href='./35'>JS CORE</a></li>
+        <li><a href='./36'>DOM</a></li>
+        <li><a href='./37'>BOM</a></li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+
+    function traverse( target, callback ) {
+      //if( target.nodeType === 1 ){
+      if( target.nodeType === Node.ELEMENT_NODE ){
+        if(target.nodeName === 'A')
+        callback(target);
+
+        var c = target.childNodes;
+        for( var i = 0; i < c.length; i++) {
+          traverse(c[i], callback);
+        }
+      }
+    }
+
+    traverse(document.getElementById('start'), function(elem){
+      if(elem.nodeName === 'A') {
+        elem.style.color='grey';
+      }
+      console.log(elem);
+    });
+  </script>
+</body>
+</html>

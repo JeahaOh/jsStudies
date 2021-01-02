@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html { border : 5px solid lightslategrey; padding: 30px; }
+    body { border : 5px solid lightseagreen; padding : 30px; }
+  </style>
+</head>
+<body>
+  <pre>
+리턴값이 false이면 기본 동작이 취소된다.
+  </pre>
+  <p>
+    <label for='prevent'>prevent event on</label>
+    <input type='checkbox' id='prevent' name='eventprevent' value='on' checked='checked' /><br>
+    <a href='http://jeaha.dev'>Null Link</a>
+    <form action='http://jeaha.dev'>
+      <input type='submit' />
+    </form>
+  </p>
+  <script>
+    document.querySelector('a').onclick = function( evt ) {
+      if( document.getElementById('prevent').checked ) {
+        return false;
+      }
+    };
+
+    document.querySelector('form').onsubmit = function( evt ) {
+      if( document.getElementById('prevent').checked ) {
+        return false;
+      }
+    };
+  </script>
+</body>
+</html>

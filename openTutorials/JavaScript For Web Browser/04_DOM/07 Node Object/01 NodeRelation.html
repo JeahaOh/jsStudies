@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Node 관계 API</title>
+</head>
+<body id='start'>
+  <ul>
+    <li><a href='./32'>HTML</a></li>
+    <li><a href='./33'>CSS</a></li>
+    <li><a href='./34'>JS</a>
+      <ul>
+        <li><a href='./35'>JS CORE</a></li>
+        <li><a href='./36'>DOM</a></li>
+        <li><a href='./37'>BOM</a></li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    var s = document.getElementById('start');
+    console.log(1, s.firstChild);                // #text
+
+    var ul = s.firstChild.nextSibling;
+    console.log(2, ul);                          // ul
+    console.log(3, ul.nextSibling);              // #text
+    console.log(4, ul.nextSibling.nextSibling);  // script
+    console.log(5, ul.childNodes);               // text, li, text, li, text, li, text
+    console.log(6, ul.childNodes[1]);            // li(html)
+    console.log(7, ul.parentNode);               // body
+  </script>
+</body>
+</html>

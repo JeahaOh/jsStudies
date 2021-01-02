@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      border: 1px solid grey;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <ul id='target'>
+    <li>CSS</li>
+  </ul>
+
+  <input type='button' onclick='beforebegin();' value='beforebegin' />
+  <input type='button' onclick='afterbegin();' value='afterbegin' />
+
+  <input type='button' onclick='beforeend();' value='beforeend' />
+  <input type='button' onclick='afterend();' value='afterend' />
+
+  
+  <pre>
+좀 더 정교하게 문자열을 이용해서 노드를 변경하고 싶을 때 사용.
+  </pre>
+
+  <script>
+    function beforebegin() {
+      var target = document.getElementById('target');
+      target.insertAdjacentHTML('beforebegin', '<li>Client Side</li>');
+    }
+    function afterbegin() {
+      var target = document.getElementById('target');
+      target.insertAdjacentHTML('afterbegin', '<li>HTML</li>');
+    }
+    function beforeend() {
+      var target = document.getElementById('target');
+      target.insertAdjacentHTML('beforeend', '<li>JS</li>');
+    }
+    function afterend() {
+      var target = document.getElementById('target');
+      target.insertAdjacentHTML('afterend', '<li>Server Side</li>');
+    }
+  </script>
+</body>
+</html>

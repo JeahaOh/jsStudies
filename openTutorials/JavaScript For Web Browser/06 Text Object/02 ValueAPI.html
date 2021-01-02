@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEXT OBJECT</title>
+</head>
+<body>
+  
+  <ul>
+    <li id='target'>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <script>
+    var t = document.getElementById('target').firstChild;
+
+    console.log(t.nodeValue);
+    console.log(t.data);
+    
+    /** Result
+     *  HTML
+     *  HTML
+     */
+  </script>
+</body>
+</html>

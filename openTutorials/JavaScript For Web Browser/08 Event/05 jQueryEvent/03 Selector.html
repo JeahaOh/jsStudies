@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='../../../jquery-3.3.1.min.js'></script>
+</head>
+<body>
+  <ul>
+    <li><a href='#'>HTML</a></li>
+    <li><a href='#'>CSS</a></li>
+    <li><a href='#'>JS</a></li>
+  </ul>
+
+  <script>
+    $('ul').on('click', 'a, li', function( event ) {
+      console.log(this.tagName);
+    });
+    /** Result
+     *  A
+     *  LI
+     */
+  </script>
+
+  <pre>
+ul 엘리먼트의 하위 엘리먼트중에 a, li 엘리먼트들에 대해서만 이벤트가 발생한다.
+ul 엘리먼트에는 이벤트가 발생하지 않는다.
+jQuery가 이벤트 버블링을 구현했기 때문.
+  </pre>
+</body>
+</html>

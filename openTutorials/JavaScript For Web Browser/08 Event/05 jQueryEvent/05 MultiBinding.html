@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='../../../jquery-3.3.1.min.js'></script>
+</head>
+<body>
+  <pre>
+    <input type='text' id='target1' />
+    <p id='status1'></p>
+    <input type='text' id='target2' />
+    <p id='status2'></p>
+  </pre>
+
+  <script>
+    //  하나의 엘리먼트에 여러개의 이벤트 타입을 동시에 등록할 수 있다.
+    $('#target1').on('focus blur',function( event ) {
+      $('#status1').html(event.type);
+    });
+
+    //  한번에 여러개의 이벤트 타입을 선택했다.
+    //  만약 이벤트에 따라서 다른 핸들러를 실행하고 싶다면 아래와 같이 코드를 변경할 수 있디.
+    $('#target2').on({
+      'focus' : function(e) {
+        $('#status2').html(e.type);
+      },
+      'blur' : function(e) {
+        console.log(e.type)
+      }
+    });
+  </script>
+
+</body>
+</html>

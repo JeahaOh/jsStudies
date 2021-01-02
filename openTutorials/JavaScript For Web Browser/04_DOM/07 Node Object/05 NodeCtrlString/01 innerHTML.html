@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      border: 1px solid grey;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <ul id='target'>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+
+  <input type='button' onclick='get();' value='get' />
+  <input type='button' onclick='set();' value='set' />
+
+  <pre>
+innerHTML은 문자열로 자식 노드를 만들 수 있는 기능을 제공한다.
+또한 자식 노드의 값을 읽어올 수도 있다.
+  </pre>
+
+  <script>
+    function get() {
+      var target = document.getElementById('target');
+      alert(target.innerHTML);
+    }
+    function set() {
+      var target = document.getElementById('target');
+      target.innerHTML = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+    }
+  </script>
+</body>
+</html>

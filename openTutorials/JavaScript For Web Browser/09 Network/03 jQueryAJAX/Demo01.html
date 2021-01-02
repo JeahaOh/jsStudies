@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='jQuery.js'></script>
+</head>
+<body>
+  <pre>
+    <p>TIME : <span id='time'></span></p>
+    <input type='button' id='execute' value='execute' />
+  </pre>
+
+  <script>
+    $('#execute').click(function() {
+      $.ajax({
+        url: '/time',
+        success: function( data ) {
+          console.log(data);
+          $('#time').append( data );
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

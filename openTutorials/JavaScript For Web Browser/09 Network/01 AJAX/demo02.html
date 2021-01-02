@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='jQuery.js'></script>
+</head>
+<body>
+  <pre>
+    <p>TIME : <span id='time'></span></p>
+    <select id='timezone'>
+      <option value='Asia/Seoul'>Asia/Seoul</option>
+      <option value='America/New_York'>America/New_York</option>
+    </select>
+    <select id='format'>
+      <option value='Y-m-d H:i:s'>Y-m-d H:i:s</option>
+      <option value='Y-m-d'>Y-m-d</option>
+    </select>
+    <input type='button' id='execute' value='execute' />
+  </pre>
+
+  <script>
+    $('#execute').on('click', function(e) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/time2');
+      xhr.onreadystatechange = function() {
+        if( xhr.readyState === 4 && xhr.status === 200 ) {
+          console.log(xhr);
+          document.querySelector('#time').innerHTML = xhr.responseText;
+        }
+      }
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      var data = '';
+      data += 'timezone=' + document.getElementById('timezone').value;
+      data += '&format=' + document.getElementById('format').value;
+      console.log(data);
+      xhr.send( data );
+    });
+  </script>
+
+</body>
+</html>

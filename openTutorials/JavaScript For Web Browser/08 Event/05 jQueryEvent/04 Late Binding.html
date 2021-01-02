@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='../../../jquery-3.3.1.min.js'></script>
+</head>
+<body>
+
+  <script>
+    $('ul').on('click', 'a, li', function( event ) {
+      console.log(this.tagName);
+    });
+  </script>
+
+  <ul>
+    <li><a href='#'>HTML</a></li>
+    <li><a href='#'>CSS</a></li>
+    <li><a href='#'>JS</a></li>
+  </ul>
+
+  <pre>
+이 코드는 실행되지 않는다.
+ul 코드가 생성되기 전에 이벤트 설치를 시도하기 때문.
+그런데 jquery는 존재하지 않는 엘리먼트에 이벤트를 달 수 있다.
+  </pre>
+</body>
+</html>
